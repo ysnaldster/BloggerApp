@@ -25,3 +25,14 @@
 /home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/obj/Debug/net6.0/ref/BlogApplication.Api.dll
 /home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/obj/Debug/net6.0/BlogApplication.Api.pdb
 /home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/obj/Debug/net6.0/BlogApplication.Api.genruntimeconfig.cache
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/BlogApplication.Domain.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/BlogApplication.Domain.pdb
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/Npgsql.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/Humanizer.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll

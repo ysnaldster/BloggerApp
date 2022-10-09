@@ -1,0 +1,12 @@
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/bin/Debug/net6.0/BlogApplication.Domain.deps.json
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/bin/Debug/net6.0/BlogApplication.Domain.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/bin/Debug/net6.0/ref/BlogApplication.Domain.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/bin/Debug/net6.0/BlogApplication.Domain.pdb
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/BlogApplication.Domain.csproj.AssemblyReference.cache
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/BlogApplication.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/BlogApplication.Domain.AssemblyInfoInputs.cache
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/BlogApplication.Domain.AssemblyInfo.cs
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/BlogApplication.Domain.csproj.CoreCompileInputs.cache
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/BlogApplication.Domain.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/ref/BlogApplication.Domain.dll
+/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/BlogApplication.Domain.pdb
