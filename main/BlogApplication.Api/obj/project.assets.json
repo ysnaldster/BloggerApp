@@ -454,11 +454,31 @@
       "BlogApplication.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BlogApplication.Infrastructure": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
         "compile": {
           "bin/placeholder/BlogApplication.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/BlogApplication.Domain.dll": {}
+        }
+      },
+      "BlogApplication.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BlogApplication.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9",
+          "Microsoft.EntityFrameworkCore.InMemory": "6.0.9",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.7"
+        },
+        "compile": {
+          "bin/placeholder/BlogApplication.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogApplication.Infrastructure.dll": {}
         }
       }
     }
@@ -1032,11 +1052,17 @@
       "type": "project",
       "path": "../BlogApplication.Domain/BlogApplication.Domain.csproj",
       "msbuildProject": "../BlogApplication.Domain/BlogApplication.Domain.csproj"
+    },
+    "BlogApplication.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../BlogApplication.Infrastructure/BlogApplication.Infrastructure.csproj",
+      "msbuildProject": "../BlogApplication.Infrastructure/BlogApplication.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "BlogApplication.Domain >= 1.0.0",
+      "BlogApplication.Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.5",
       "Microsoft.EntityFrameworkCore.InMemory >= 6.0.9",
@@ -1045,19 +1071,19 @@
     ]
   },
   "packageFolders": {
-    "/home/ysnaldo/.nuget/packages/": {}
+    "C:\\Users\\ysnal\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/BlogApplication.Api.csproj",
+      "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Api\\BlogApplication.Api.csproj",
       "projectName": "BlogApplication.Api",
-      "projectPath": "/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/BlogApplication.Api.csproj",
-      "packagesPath": "/home/ysnaldo/.nuget/packages/",
-      "outputPath": "/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Api/obj/",
+      "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Api\\BlogApplication.Api.csproj",
+      "packagesPath": "C:\\Users\\ysnal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ysnaldo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ysnal\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1069,8 +1095,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/BlogApplication.Domain.csproj": {
-              "projectPath": "/home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/BlogApplication.Domain.csproj"
+            "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj": {
+              "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj"
+            },
+            "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Infrastructure\\BlogApplication.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Infrastructure\\BlogApplication.Infrastructure.csproj"
             }
           }
         }
@@ -1114,7 +1143,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -1126,7 +1156,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.109/sdk/6.0.109/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

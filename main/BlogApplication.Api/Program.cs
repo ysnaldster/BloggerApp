@@ -1,22 +1,13 @@
-using BlogApplication.Api.Context;
-using BlogApplication.Domain.interfaces;
-using BlogApplication.Domain.Services;
+using BlogApplication.Api.Configurations;
+using BlogApplication.Infrastructure.Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddNpgsql<BlogApplicationContext>(builder.Configuration.GetConnectionString("blog_application_db"));
-// For use of user property DateTime
-AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-
-// Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//Dependencies Inyection
-builder.Services.AddScoped<IHelloWorldService, HelloWorldService>();
-builder.Services.AddScoped<IPost, PostService>();
+builder.Services.AddInfrastructureApi(builder.Configuration);
 
 var app = builder.Build();
 
@@ -27,7 +18,6 @@ app.MapGet("/dbconnection", async ([FromServices]
     return Results.Ok("Database in memory: " + dbContext.Database.IsInMemory());
 });
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -39,10 +29,6 @@ app.UseHttpsRedirection();
 app.UseCors();
 
 app.UseAuthorization();
-//Custom Middleware
-//app.UseWelcomePage();
-
-//app.UseTimeMiddleware();
 
 app.MapControllers();
 

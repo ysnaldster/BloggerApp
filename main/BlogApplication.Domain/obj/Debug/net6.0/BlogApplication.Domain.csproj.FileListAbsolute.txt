@@ -10,3 +10,15 @@
 /home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/BlogApplication.Domain.dll
 /home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/ref/BlogApplication.Domain.dll
 /home/ysnaldo/Desktop/Study/backendTraining/projects/c#Projects/BlogApplication/main/BlogApplication.Domain/obj/Debug/net6.0/BlogApplication.Domain.pdb
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\bin\Debug\net6.0\BlogApplication.Domain.deps.json
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\bin\Debug\net6.0\BlogApplication.Domain.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\bin\Debug\net6.0\BlogApplication.Domain.pdb
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.csproj.AssemblyReference.cache
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.AssemblyInfoInputs.cache
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.AssemblyInfo.cs
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\refint\BlogApplication.Domain.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.pdb
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\ref\BlogApplication.Domain.dll

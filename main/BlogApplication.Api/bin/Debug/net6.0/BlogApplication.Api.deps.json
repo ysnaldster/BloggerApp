@@ -9,6 +9,7 @@
       "BlogApplication.Api/1.0.0": {
         "dependencies": {
           "BlogApplication.Domain": "1.0.0",
+          "BlogApplication.Infrastructure": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.9",
           "Microsoft.EntityFrameworkCore.Design": "6.0.5",
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.9",
@@ -228,6 +229,17 @@
         "runtime": {
           "BlogApplication.Domain.dll": {}
         }
+      },
+      "BlogApplication.Infrastructure/1.0.0": {
+        "dependencies": {
+          "BlogApplication.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9",
+          "Microsoft.EntityFrameworkCore.InMemory": "6.0.9",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.7"
+        },
+        "runtime": {
+          "BlogApplication.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -427,6 +439,11 @@
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
     "BlogApplication.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogApplication.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

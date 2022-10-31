@@ -41,6 +41,7 @@ public class InitData
             UserId = Guid.Parse("8dd1b477-0d2b-42ae-bfd3-0de9d74b7fbb"),
             CategoryId = Guid.Parse("b7d0bbf0-a1e9-4dbd-845b-f8e751160000"),
             Title = "The new things of technology",
+            Author = "Camila",
             Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
             Status = true,
         });
@@ -49,6 +50,7 @@ public class InitData
             Id = Guid.Parse("e97de533-9e22-4944-92bc-bdd799b6c786"),
             UserId = Guid.Parse("8dd1b477-0d2b-42ae-bfd3-0de9d74b7fcc"),
             CategoryId = Guid.Parse("b7d0bbf0-a1e9-4dbd-845b-f8e751160001"),
+            Author = "Santiago",
             Title = "Clean House Tips",
             Content = "Proin finibus sodales purus, et luctus urna laoreet ullamcorper. Donec vitae dapibus massa. Suspendisse id maximus risus",
             Status = false,
@@ -58,6 +60,7 @@ public class InitData
             Id = Guid.Parse("e97de533-9e22-4944-92bc-bdd799b6c787"),
             UserId = Guid.Parse("8dd1b477-0d2b-42ae-bfd3-0de9d74b7fdd"),
             CategoryId = Guid.Parse("b7d0bbf0-a1e9-4dbd-845b-f8e751160002"),
+            Author = "Fernando",
             Title = "New's",
             Content = "Fusce iaculis sem nec tellus suscipit congue. Etiam pharetra posuere porta. Mauris semper quam ut sapien pharetra laoreet. Donec ultrices",
             Status = true,

@@ -1,13 +1,27 @@
-using BlogApplication.Domain.interfaces;
+using BlogApplication.Domain.Interfaces;
+using BlogApplication.Infrastructure.Interfaces;
 
 namespace BlogApplication.Domain.Services;
 
-public class PostService : IPost
+public class PostService : IPostService
 {
-    public Task SavePost()
+    
+    private readonly IPostRepository _postRepository;
+    
+    public PostService(IPostRepository postRepository)
     {
-        Thread.Sleep(10000);
-        Console.WriteLine("Termino la tarea");
-        return Task.CompletedTask;
+        _postRepository = postRepository;
     }
+    /*
+    public Task<bool> GetDatabaseConnection()
+    {
+        return _postRepository.GetDatabaseConnection();
+    }
+    
+    public Task<string> GetAllPosts()
+    {
+        throw new NotImplementedException();
+    }
+    */
 }
+

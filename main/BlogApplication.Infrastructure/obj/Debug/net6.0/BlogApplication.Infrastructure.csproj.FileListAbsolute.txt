@@ -1,0 +1,17 @@
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\bin\Debug\net6.0\BlogApplication.Infrastructure.deps.json
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\bin\Debug\net6.0\BlogApplication.Infrastructure.runtimeconfig.json
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\bin\Debug\net6.0\BlogApplication.Infrastructure.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\bin\Debug\net6.0\BlogApplication.Infrastructure.pdb
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\bin\Debug\net6.0\BlogApplication.Domain.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\bin\Debug\net6.0\BlogApplication.Domain.pdb
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\BlogApplication.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\BlogApplication.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\BlogApplication.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\BlogApplication.Infrastructure.AssemblyInfo.cs
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\BlogApplication.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\BlogApplication.Infrastructure.csproj.CopyComplete
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\BlogApplication.Infrastructure.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\refint\BlogApplication.Infrastructure.dll
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\BlogApplication.Infrastructure.pdb
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\BlogApplication.Infrastructure.genruntimeconfig.cache
+C:\Users\ysnal\OneDrive\Escritorio\developer\projects\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\ref\BlogApplication.Infrastructure.dll
