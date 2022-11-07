@@ -13,8 +13,8 @@ public class User
     public DateTime UpdateDate { get; set; }
     
     [JsonIgnore]
-    public virtual ICollection <Post> Posts { get; set;}
+    public virtual ICollection <Post>? Posts { get; set;}
     
     [JsonIgnore]
-    public virtual ICollection<Comment> Comments { get; set;}
+    public virtual ICollection<Comment>? Comments { get; set;}
 }

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "EbZFUUHcoWkb94QUxmtJTQB3j/TFlTq8kyKywAIxfjXHjSHB4vRasU4CuhiLlw9/ZERQnuJFgt+922yaTf93qA==",
-  "success": false,
+  "dgSpecHash": "UeoBpFmlXgwbJ2t03tOddk8/O+BbKSyCshOtxWwSdNG0MBLAcR29wpzD7gtCV3WWZIr+DHNkW4hH3/IV35NvvQ==",
+  "success": true,
   "projectFilePath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Infrastructure\\BlogApplication.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ysnal\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -26,15 +26,5 @@
     "C:\\Users\\ysnal\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\ysnal\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1108",
-      "level": "Error",
-      "message": "Cycle detected. \r\n  BlogApplication.Infrastructure -> BlogApplication.Domain -> BlogApplication.Infrastructure.",
-      "libraryId": "BlogApplication.Infrastructure",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

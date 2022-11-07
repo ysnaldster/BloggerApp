@@ -8,7 +8,7 @@ public class Category
     public CategoryName Name { get; set;}
     
     [JsonIgnore]
-    public virtual ICollection<Post> Posts { get; set;}
+    public virtual ICollection<Post>? Posts { get; set;}
     public enum CategoryName
     {
         Literature, Sports, Shows

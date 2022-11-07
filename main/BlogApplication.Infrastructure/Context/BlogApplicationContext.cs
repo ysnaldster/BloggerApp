@@ -4,14 +4,14 @@ namespace BlogApplication.Infrastructure.Context;
 
 public class BlogApplicationContext : DbContext
 {
-    /*
+    
     public DbSet<User> Users { get; set;} 
     public DbSet<Post> Posts { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Comment> Comments { get; set; }
-    private DbSet<Label> Labels { get; set; }
-    private DbSet<PostLabelPivot> PostLabelPivots { get; set; }
-    */
+    public DbSet<Label> Labels { get; set; }
+    public DbSet<PostLabelPivot> PostLabelPivots { get; set; }
+    
     public BlogApplicationContext(DbContextOptions<BlogApplicationContext> options) : base(options) {} // Config Fluent API
     
     // Create Schemas with Fluent API
@@ -29,7 +29,7 @@ public class BlogApplicationContext : DbContext
             user.Property(p => p.CreationDate).HasColumnName("Creation_date").HasDefaultValue(DateTime.Now);
             user.Property(p => p.UpdateDate).HasColumnName("Update_date").HasDefaultValue(DateTime.Now);
 
-            //user.HasData(InitData.LoadUsers());
+            user.HasData(InitData.LoadUsers());
         });
         
         // Create PostSchema
@@ -45,7 +45,7 @@ public class BlogApplicationContext : DbContext
             post.Property(p => p.Author).HasColumnName("Author").HasMaxLength(50);
             post.Property(p => p.Status).HasColumnName("Status").HasDefaultValue(true);
 
-            //post.HasData(InitData.LoadPosts());
+            post.HasData(InitData.LoadPosts());
         });
         
         // Create CommentSchema
@@ -57,7 +57,7 @@ public class BlogApplicationContext : DbContext
             comment.HasOne(p => p.User).WithMany(p => p.Comments);
             comment.Property(p => p.Content).HasMaxLength(200).HasColumnName("Content").IsRequired(false);
             comment.Property(p => p.PublicationDate).HasDefaultValue(DateTime.Now).HasColumnName("Publication_date");
-            //comment.HasData(InitData.LoadComments());
+            comment.HasData(InitData.LoadComments());
         });
        
         // Create CategorySchema
@@ -66,7 +66,7 @@ public class BlogApplicationContext : DbContext
             category.ToTable("Category");
             category.HasKey(p => p.Id);
             category.Property(p => p.Name).HasColumnName("Name");
-            //category.HasData(InitData.LoadCategories());
+            category.HasData(InitData.LoadCategories());
         });
         
         // Create LabelSchema
@@ -76,7 +76,7 @@ public class BlogApplicationContext : DbContext
             label.HasKey(p => p.Id);
             label.Property(p => p.Name).HasColumnName("Name");
 
-            //label.HasData(InitData.LoadLabels());
+            label.HasData(InitData.LoadLabels());
         });
         
         //Create Pivot Table Post_Label
@@ -87,7 +87,7 @@ public class BlogApplicationContext : DbContext
             pivot.HasOne(p => p.Label).WithMany(p => p.LabelPivots);
             pivot.HasOne(p => p.Post).WithMany(p => p.PostPivots);
 
-            //pivot.HasData(InitData.LoadPostLabelPivot());
+            pivot.HasData(InitData.LoadPostLabelPivot());
         });
     }
 }

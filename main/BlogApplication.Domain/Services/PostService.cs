@@ -1,5 +1,5 @@
+using BlogApplication.Domain.Entities;
 using BlogApplication.Domain.Interfaces;
-using BlogApplication.Infrastructure.Interfaces;
 
 namespace BlogApplication.Domain.Services;
 
@@ -12,16 +12,35 @@ public class PostService : IPostService
     {
         _postRepository = postRepository;
     }
-    /*
-    public Task<bool> GetDatabaseConnection()
+    
+    public bool GetDatabaseConnection()
     {
         return _postRepository.GetDatabaseConnection();
     }
-    
-    public Task<string> GetAllPosts()
+
+    public IEnumerable<Post> GetAllPosts()
     {
-        throw new NotImplementedException();
+        return _postRepository.GetAllPosts();
     }
-    */
+
+    public Post? GetPost(Guid id)
+    {
+        return _postRepository.GetPost(id);
+    }
+
+    public Post? SavePost(Post post)
+    {
+        return _postRepository.SavePost(post);
+    }
+
+    public Post? UpdatePost(Guid id, Post post)
+    {
+        return _postRepository.UpdatePost(id, post);
+    }
+
+    public Post? DeletePost(Guid id)
+    {
+        return _postRepository.DeletePost(id);
+    }
 }
 

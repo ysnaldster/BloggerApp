@@ -1,9 +1,19 @@
+using BlogApplication.Domain.Entities;
+
 namespace BlogApplication.Domain.Interfaces;
 
 public interface IPostService
 {
-    /*
-    public Task<bool> GetDatabaseConnection();
-    public Task<string> GetAllPosts();
-    */
+    
+    public bool GetDatabaseConnection();
+    public IEnumerable<Post> GetAllPosts();
+
+    public Post? GetPost(Guid id);
+
+    public Post? SavePost(Post post);
+
+    public Post? UpdatePost(Guid id, Post post);
+
+    public Post? DeletePost(Guid id);
+
 }
