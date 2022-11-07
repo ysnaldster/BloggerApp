@@ -226,6 +226,9 @@
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "BlogApplication.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
         "runtime": {
           "BlogApplication.Domain.dll": {}
         }

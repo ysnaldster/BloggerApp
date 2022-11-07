@@ -1,7 +1,6 @@
 using BlogApplication.Domain.Interfaces;
 using BlogApplication.Domain.Services;
 using BlogApplication.Infrastructure.Context;
-using BlogApplication.Infrastructure.Interfaces;
 using BlogApplication.Infrastructure.Repositories;
 
 namespace BlogApplication.Api.Configurations;
