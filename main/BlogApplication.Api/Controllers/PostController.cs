@@ -28,95 +28,48 @@ public class PostController : ControllerBase
 
     [HttpGet]
     [Route("posts")]
-    public IEnumerable<Post> GetPosts()
+    public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
     {
-        return _postService.GetAllPosts();
+        var result =  await _postService.GetAllPosts();
+        if (result.Any()) return Ok(result);
+        return NotFound();
     }
 
     [HttpGet]
     [Route("posts/{id}")]
-    public ActionResult<Post> GetPost(Guid id)
+    public async Task<ActionResult<Post>> GetPost(Guid id)
     {
-        try
-        {
-            var result = _postService.GetPost(id);
-            if (result == null)
-            {
-                return NotFound();
-            }
-            return result;
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+        var result = await _postService.GetPost(id);
+        if (result!=null) return Ok(result);
+        return NotFound();
     }
 
     [HttpPost]
     [Route("posts")]
-    public ActionResult<Post> CreatePost([FromBody] Post post)
+    public async Task<ActionResult<Post>> CreatePost([FromBody] Post? post)
     {
+        if (post == null) return BadRequest();
+        var result = await _postService.SavePost(post);
         _logger.LogInformation("Create post successes");
-        try
-        {
-            var result = _postService.SavePost(post);
-            if (result == null)
-            {
-                return BadRequest();
-            }
-
-            return result;
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+        return Ok(result);
     }
 
     [HttpPut]
     [Route("posts/{id}")]
-    public ActionResult<Post> UpdatePost(Guid id, [FromBody] Post post)
+    public async Task<ActionResult<Post>> UpdatePost(Guid? id, [FromBody] Post? post)
     {
-        _logger.LogInformation("Update post successes");
-        try
-        {
-            var result = _postService.UpdatePost(id, post);
-            if (result == null)
-            {
-                return BadRequest();
-            }
-
-            return result;
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+        if (post == null || id == null) return BadRequest();
+        var result = await _postService.UpdatePost(id, post);
+        return Ok(result);
     }
 
     [HttpDelete]
     [Route("posts/{id}")]
-    public ActionResult<Post> DeletePost(Guid id)
+    public async Task<ActionResult<Post>> DeletePost(Guid id)
     {
-        try
-        {
-            var result = _postService.DeletePost(id);
-            _logger.LogInformation("Delete post successes");
-            if (result == null)
-            {
-                return BadRequest();
-            }
-
-            return result;
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+        var result = await _postService.DeletePost(id);
+        if (result == null) return NotFound();
+        return Ok(result);
     }
     
 }

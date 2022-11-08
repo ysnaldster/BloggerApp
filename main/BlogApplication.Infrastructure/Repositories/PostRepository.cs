@@ -19,67 +19,62 @@ public class PostRepository : IPostRepository
         return _context.Database.EnsureCreated();
     }
 
-    public IEnumerable<Post> GetAllPosts()
+    public async Task<IEnumerable<Post>> GetAllPosts()
     {
-        return _context.Posts
-            .Include(p => p.User)
-            .Include(p => p.Category);
-    }
-
-    public Post? GetPost(Guid id)
-    {
-        return _context.Posts
-            .Where(s => s.Id == id)
+        return await _context.Posts
             .Include(p => p.User)
             .Include(p => p.Category)
-            .SingleOrDefault();
+            .AsNoTracking()
+            .ToListAsync();
     }
 
-    public Post? SavePost(Post post)
+    public async Task<Post?> GetPost(Guid? id)
     {
-        try
-        {
-            _context.Add(post);
-            _context.SaveChanges();
-            return post;
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+        return await _context.Posts.AsNoTracking()
+            .Include(p => p.User)
+            .Include(p => p.Category)
+            .SingleOrDefaultAsync(p => p.Id == id);
     }
 
-    public Post? UpdatePost(Guid id, Post post)
+    public async Task<Post> SavePost(Post? post)
     {
-        var actualPost = _context.Posts.Find(id);
-        if (actualPost != null)
+        if (post == null)
         {
-            actualPost.Author = post.Author;
-            actualPost.Category = post.Category;
-            actualPost.Comments = post.Comments;
-            actualPost.Content = post.Content;
-            actualPost.Status = post.Status;
-            actualPost.Title = post.Title;
-            actualPost.User = post.User;
-             _context.SaveChanges();
-            
+            throw new ArgumentNullException(nameof(post));
         }
+        await _context.AddAsync(post);
+        await _context.SaveChangesAsync();
+        return post;
+    }
+
+    public async Task<Post> UpdatePost(Guid? id, Post? post)
+    {
+        if (post == null || id == null)
+        {
+            throw new ArgumentNullException(nameof(post));
+        }
+        var actualPost = await _context.Posts.SingleOrDefaultAsync(p => p.Id == id);
+        if (actualPost == null) return post;
+        actualPost.Author = post.Author;
+        actualPost.Category = post.Category;
+        actualPost.Comments = post.Comments;
+        actualPost.Content = post.Content;
+        actualPost.Status = post.Status;
+        actualPost.Title = post.Title;
+        actualPost.User = post.User;
+        await _context.SaveChangesAsync();
         return actualPost;
     }
 
-    public Post? DeletePost(Guid id)
+    public async Task<Post?> DeletePost(Guid id)
     {
-        var postToDelete = _context.Posts
-            .Where(s => s.Id == id)
+        var postToDelete = await _context.Posts
             .Include(p => p.User)
             .Include(p => p.Category)
-            .SingleOrDefault();
-        if (postToDelete != null)
-        {
-            _context.Remove(postToDelete);
-            _context.SaveChanges();
-        }
+            .SingleOrDefaultAsync(p => p.Id == id);
+        if (postToDelete == null) return postToDelete;
+        _context.Remove(postToDelete);
+        await _context.SaveChangesAsync();
         return postToDelete;
     }
 }

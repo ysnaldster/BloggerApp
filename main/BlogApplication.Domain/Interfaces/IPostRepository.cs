@@ -5,13 +5,13 @@ namespace BlogApplication.Domain.Interfaces;
 public interface IPostRepository
 {
     public bool GetDatabaseConnection();
-    public IEnumerable<Post> GetAllPosts();
+    public Task<IEnumerable<Post>> GetAllPosts();
 
-    public Post? GetPost(Guid id);
+    public Task<Post?> GetPost(Guid? id);
 
-    public Post? SavePost(Post post);
+    public Task<Post> SavePost(Post? post);
 
-    public Post? UpdatePost(Guid id, Post post);
+    public Task<Post> UpdatePost(Guid? id, Post? post);
 
-    public Post? DeletePost(Guid id);
+    public Task<Post?> DeletePost(Guid id);
 }
