@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BlogApplication.Api.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("[controller]/api")]
 public class PostController : ControllerBase
 {
     
@@ -18,16 +18,20 @@ public class PostController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet]
-    [Route("connection")]
+    [HttpGet, Route("connection")]
     public IActionResult GetConnection()
     {
         _postService.GetDatabaseConnection();
-        return Ok();
+        return Ok("database created");
     }
 
-    [HttpGet]
-    [Route("posts")]
+    [HttpGet, Route("ping")]
+    public IActionResult Ping()
+    {
+        return Ok("pong");
+    }
+
+    [HttpGet, Route("posts")]
     public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
     {
         var result =  await _postService.GetAllPosts();
@@ -35,8 +39,7 @@ public class PostController : ControllerBase
         return NotFound();
     }
 
-    [HttpGet]
-    [Route("posts/{id}")]
+    [HttpGet, Route("posts/{id}")]
     public async Task<ActionResult<Post>> GetPost(Guid id)
     {
         var result = await _postService.GetPost(id);
@@ -44,8 +47,7 @@ public class PostController : ControllerBase
         return NotFound();
     }
 
-    [HttpPost]
-    [Route("posts")]
+    [HttpPost, Route("posts")]
     public async Task<ActionResult<Post>> CreatePost([FromBody] Post? post)
     {
         if (post == null) return BadRequest();
@@ -54,8 +56,7 @@ public class PostController : ControllerBase
         return Ok(result);
     }
 
-    [HttpPut]
-    [Route("posts/{id}")]
+    [HttpPut, Route("posts/{id}")]
     public async Task<ActionResult<Post>> UpdatePost(Guid? id, [FromBody] Post? post)
     {
         if (post == null || id == null) return BadRequest();
@@ -63,13 +64,11 @@ public class PostController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete]
-    [Route("posts/{id}")]
+    [HttpDelete, Route("posts/{id}")]
     public async Task<ActionResult<Post>> DeletePost(Guid id)
     {
         var result = await _postService.DeletePost(id);
         if (result == null) return NotFound();
         return Ok(result);
     }
-    
 }
