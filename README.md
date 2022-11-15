@@ -328,7 +328,7 @@ To consume the main Posts BlogApplication creation service use the following end
 
 This project has the following diagrams.
 
-* Entity Relationship Diagram (ER).
+* Entity Relationship Diagram (ER)
 
 For see this diagram use [diagrams .net](https://www.diagrams.net/).
 
