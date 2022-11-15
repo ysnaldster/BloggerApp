@@ -330,7 +330,11 @@ This project has the following diagrams.
 
 * Entity Relationship Diagram (ER).
 
-   **PATH:** `./bloggerApp/resources/blogApplicationRelationsDiagram`
+For see this diagram use [diagrams .net](https://www.diagrams.net/).
+
+*Download*
+
+   **PATH:**[`./bloggerApp/resources/blogApplicationRelationsDiagram`](resources/blogApplicationRelationsDiagram)
 
 * DDD (Drive Domain Design) functional diagram. 
 
