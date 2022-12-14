@@ -12,7 +12,8 @@ using Npgsql;
 
 namespace tests.Setup;
 
-public class IntegrationTestFactory : WebApplicationFactory<BlogApplicationContext>
+public class IntegrationTestFactory <TProgram, TDbContext> : WebApplicationFactory<TProgram>, IAsyncLifetime
+    where TProgram : class where TDbContext : DbContext
 {
     private readonly TestcontainerDatabase _container;
     
@@ -34,11 +35,12 @@ public class IntegrationTestFactory : WebApplicationFactory<BlogApplicationConte
     {
         builder.ConfigureTestServices(services =>
         {
-            //services.RemoveDbContext<TDbContext>();
-            services.AddSingleton<IDbConnection>(_ =>
+            services.RemoveDbContext<TDbContext>();
+            /*services.AddSingleton<IDbConnection>(_ =>
                 new NpgsqlConnection(
                     "User ID=postgres;Password=admin;Host=localhost;Port=5555;Database=blog_application_db;"));
-            //services.AddDbContext<TDbContext>(options => { options.UseNpgsql(_container.ConnectionString); });
+                    */
+            services.AddDbContext<TDbContext>(options => { options.UseNpgsql(_container.ConnectionString); });
             //services.AddTransient<BlogApplicationContext>();
         });
     }

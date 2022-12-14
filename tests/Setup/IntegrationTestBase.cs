@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestPlatform.TestHost;
 
 namespace tests.Setup;
 
-/*
+
 public class IntegrationTestBase : IClassFixture<IntegrationTestFactory<Program, BlogApplicationContext>>
 {
     public readonly IntegrationTestFactory<Program, BlogApplicationContext> Factory;
@@ -17,4 +17,3 @@ public class IntegrationTestBase : IClassFixture<IntegrationTestFactory<Program,
         //DbContext = scope.ServiceProvider.GetRequiredService<BlogApplicationContext>();
     }
 }
-*/

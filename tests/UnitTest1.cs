@@ -7,13 +7,12 @@ using tests.Setup;
 
 namespace tests;
 
-public class UnitTest1 : IntegrationTestFactory
+public class UnitTest1 : IntegrationTestBase
 {
-    private readonly IntegrationTestFactory _integrationTestFactory;
-
-    public UnitTest1(IntegrationTestFactory integrationTestFactory)
+    private readonly IntegrationTestFactory<Program, BlogApplicationContext> _integrationTestFactory;
+    public UnitTest1(IntegrationTestFactory<Program, BlogApplicationContext> factory) : base(factory)
     {
-        _integrationTestFactory = integrationTestFactory;
+        _integrationTestFactory = factory;
     }
 
     [Fact]
