@@ -11,17 +11,14 @@ public class TimeMiddleware
         next = nextRequest;
     }
 
-    public async Task Invoke(Microsoft.AspNetCore.Http.HttpContext context) //HttpContext representa toda la información del request
+    public async Task Invoke(HttpContext context) //HttpContext representa toda la información del request
     {
         //Esto invoca al ultimo middleware que se ejecuto 
         await next(context);
-        
-        if(context.Request.Query.Any(p => p.Key == "time"))
-        {
+
+        if (context.Request.Query.Any(p => p.Key == "time"))
             await context.Response.WriteAsync(DateTime.Now.ToShortDateString());
-        }
     }
-    
 }
 
 public static class TimeMiddlewareExtension

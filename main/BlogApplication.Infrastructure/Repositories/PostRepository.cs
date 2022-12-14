@@ -38,10 +38,7 @@ public class PostRepository : IPostRepository
 
     public async Task<Post> SavePost(Post? post)
     {
-        if (post == null)
-        {
-            throw new ArgumentNullException(nameof(post));
-        }
+        if (post == null) throw new ArgumentNullException(nameof(post));
         await _context.AddAsync(post);
         await _context.SaveChangesAsync();
         return post;
@@ -49,10 +46,7 @@ public class PostRepository : IPostRepository
 
     public async Task<Post> UpdatePost(Guid? id, Post? post)
     {
-        if (post == null || id == null)
-        {
-            throw new ArgumentNullException(nameof(post));
-        }
+        if (post == null || id == null) throw new ArgumentNullException(nameof(post));
         var actualPost = await _context.Posts.SingleOrDefaultAsync(p => p.Id == id);
         if (actualPost == null) return post;
         actualPost.Author = post.Author;

@@ -10,11 +10,11 @@ public static class DependencyInjection
     public static void AddInfrastructureApi(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("DefaultConnection");
-        
+
         services.AddNpgsql<BlogApplicationContext>(connectionString);
         services.AddScoped<IPostService, PostService>();
         services.AddScoped<IPostRepository, PostRepository>();
-        
+
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 }

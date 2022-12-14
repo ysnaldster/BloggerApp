@@ -1,19 +1,21 @@
 using BlogApplication.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+
 namespace BlogApplication.Infrastructure.Context;
 
 public class BlogApplicationContext : DbContext
 {
-    
-    public DbSet<User> Users { get; set;} 
+    public BlogApplicationContext(DbContextOptions<BlogApplicationContext> options) : base(options)
+    {
+    } // Config Fluent API
+
+    public DbSet<User> Users { get; set; }
     public DbSet<Post> Posts { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Comment> Comments { get; set; }
     public DbSet<Label> Labels { get; set; }
     public DbSet<PostLabelPivot> PostLabelPivots { get; set; }
-    
-    public BlogApplicationContext(DbContextOptions<BlogApplicationContext> options) : base(options) {} // Config Fluent API
-    
+
     // Create Schemas with Fluent API
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -31,7 +33,7 @@ public class BlogApplicationContext : DbContext
 
             user.HasData(InitData.LoadUsers());
         });
-        
+
         // Create PostSchema
         modelBuilder.Entity<Post>(post =>
         {
@@ -47,7 +49,7 @@ public class BlogApplicationContext : DbContext
 
             post.HasData(InitData.LoadPosts());
         });
-        
+
         // Create CommentSchema
         modelBuilder.Entity<Comment>(comment =>
         {
@@ -59,7 +61,7 @@ public class BlogApplicationContext : DbContext
             comment.Property(p => p.PublicationDate).HasDefaultValue(DateTime.Now).HasColumnName("Publication_date");
             comment.HasData(InitData.LoadComments());
         });
-       
+
         // Create CategorySchema
         modelBuilder.Entity<Category>(category =>
         {
@@ -68,7 +70,7 @@ public class BlogApplicationContext : DbContext
             category.Property(p => p.Name).HasColumnName("Name");
             category.HasData(InitData.LoadCategories());
         });
-        
+
         // Create LabelSchema
         modelBuilder.Entity<Label>(label =>
         {
@@ -78,7 +80,7 @@ public class BlogApplicationContext : DbContext
 
             label.HasData(InitData.LoadLabels());
         });
-        
+
         //Create Pivot Table Post_Label
         modelBuilder.Entity<PostLabelPivot>(pivot =>
         {

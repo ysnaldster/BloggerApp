@@ -8,9 +8,9 @@ namespace BlogApplication.Api.Controllers;
 [Route("[controller]/api")]
 public class PostController : ControllerBase
 {
-    
-    private readonly IPostService _postService;
     private readonly ILogger<PostController> _logger;
+
+    private readonly IPostService _postService;
 
     public PostController(IPostService postService, ILogger<PostController> logger)
     {
@@ -18,36 +18,41 @@ public class PostController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet, Route("connection")]
+    [HttpGet]
+    [Route("connection")]
     public IActionResult GetConnection()
     {
         _postService.GetDatabaseConnection();
         return Ok("database created");
     }
 
-    [HttpGet, Route("ping")]
+    [HttpGet]
+    [Route("ping")]
     public IActionResult Ping()
     {
         return Ok("pong");
     }
 
-    [HttpGet, Route("posts")]
+    [HttpGet]
+    [Route("posts")]
     public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
     {
-        var result =  await _postService.GetAllPosts();
+        var result = await _postService.GetAllPosts();
         if (result.Any()) return Ok(result);
         return NotFound();
     }
 
-    [HttpGet, Route("posts/{id}")]
+    [HttpGet]
+    [Route("posts/{id}")]
     public async Task<ActionResult<Post>> GetPost(Guid id)
     {
         var result = await _postService.GetPost(id);
-        if (result!=null) return Ok(result);
+        if (result != null) return Ok(result);
         return NotFound();
     }
 
-    [HttpPost, Route("posts")]
+    [HttpPost]
+    [Route("posts")]
     public async Task<ActionResult<Post>> CreatePost([FromBody] Post? post)
     {
         if (post == null) return BadRequest();
@@ -56,7 +61,8 @@ public class PostController : ControllerBase
         return Ok(result);
     }
 
-    [HttpPut, Route("posts/{id}")]
+    [HttpPut]
+    [Route("posts/{id}")]
     public async Task<ActionResult<Post>> UpdatePost(Guid? id, [FromBody] Post? post)
     {
         if (post == null || id == null) return BadRequest();
@@ -64,7 +70,8 @@ public class PostController : ControllerBase
         return Ok(result);
     }
 
-    [HttpDelete, Route("posts/{id}")]
+    [HttpDelete]
+    [Route("posts/{id}")]
     public async Task<ActionResult<Post>> DeletePost(Guid id)
     {
         var result = await _postService.DeletePost(id);

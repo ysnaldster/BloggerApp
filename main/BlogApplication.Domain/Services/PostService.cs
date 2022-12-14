@@ -5,14 +5,13 @@ namespace BlogApplication.Domain.Services;
 
 public class PostService : IPostService
 {
-    
     private readonly IPostRepository _postRepository;
-    
+
     public PostService(IPostRepository postRepository)
     {
         _postRepository = postRepository;
     }
-    
+
     public bool GetDatabaseConnection()
     {
         return _postRepository.GetDatabaseConnection();
@@ -43,4 +42,3 @@ public class PostService : IPostService
         return _postRepository.DeletePost(id);
     }
 }
-

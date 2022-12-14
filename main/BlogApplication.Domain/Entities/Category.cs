@@ -4,13 +4,15 @@ namespace BlogApplication.Domain.Entities;
 
 public class Category
 {
-    public Guid Id { get; set;}
-    public CategoryName Name { get; set;}
-    
-    [JsonIgnore]
-    public virtual ICollection<Post>? Posts { get; set;}
     public enum CategoryName
     {
-        Literature, Sports, Shows
+        Literature,
+        Sports,
+        Shows
     }
+
+    public Guid Id { get; set; }
+    public CategoryName Name { get; set; }
+
+    [JsonIgnore] public virtual ICollection<Post>? Posts { get; set; }
 }
