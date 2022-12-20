@@ -5,15 +5,13 @@ using Microsoft.VisualStudio.TestPlatform.TestHost;
 namespace tests.Setup;
 
 
-public class IntegrationTestBase : IClassFixture<IntegrationTestFactory<Program, BlogApplicationContext>>
+public abstract class IntegrationTestBase : IClassFixture<IntegrationTestFactory<Program, BlogApplicationContext>>
 {
-    public readonly IntegrationTestFactory<Program, BlogApplicationContext> Factory;
-    //public readonly BlogApplicationContext DbContext;
+    public readonly IntegrationTestFactory<Program, BlogApplicationContext> _factory;
 
     public IntegrationTestBase(IntegrationTestFactory<Program, BlogApplicationContext> factory)
     {
-        Factory = factory;
-        //var scope = factory.Services.CreateScope();
-        //DbContext = scope.ServiceProvider.GetRequiredService<BlogApplicationContext>();
+        _factory = factory;
+
     }
 }

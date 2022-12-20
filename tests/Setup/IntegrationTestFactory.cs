@@ -35,12 +35,12 @@ public class IntegrationTestFactory <TProgram, TDbContext> : WebApplicationFacto
     {
         builder.ConfigureTestServices(services =>
         {
-            services.RemoveDbContext<TDbContext>();
-            /*services.AddSingleton<IDbConnection>(_ =>
+            //services.RemoveDbContext<TDbContext>();
+            services.AddSingleton<IDbConnection>(_ =>
                 new NpgsqlConnection(
                     "User ID=postgres;Password=admin;Host=localhost;Port=5555;Database=blog_application_db;"));
-                    */
-            services.AddDbContext<TDbContext>(options => { options.UseNpgsql(_container.ConnectionString); });
+                    
+            //services.AddDbContext<TDbContext>(options => { options.UseNpgsql(_container.ConnectionString); });
             //services.AddTransient<BlogApplicationContext>();
         });
     }

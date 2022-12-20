@@ -7,17 +7,14 @@ using tests.Setup;
 
 namespace tests;
 
-public class UnitTest1 : IntegrationTestBase
+public class UnitTest1
 {
-    private readonly IntegrationTestFactory<Program, BlogApplicationContext> _integrationTestFactory;
-    public UnitTest1(IntegrationTestFactory<Program, BlogApplicationContext> factory) : base(factory)
-    {
-        _integrationTestFactory = factory;
-    }
-
+    
     [Fact]
     public async void Test1()
     {
+        await _integrationTestFactory.InitializeAsync();
+        _integrationTestFactory.
         //var client1 = _integrationTestFactory.CreateClient();
         var client = _integrationTestFactory.CreateClient();
         //var result = await client.GetFromJsonAsync<IEnumerable<Post>>("/post/api/posts");
