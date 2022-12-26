@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "33a56505-251a-4698-8c48-f42b0ff914e4",
+		"name": "BlogApplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15757149"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/post/api/ping",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"post",
+								"api",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DatabaseConnection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/post/api/connection",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"post",
+								"api",
+								"connection"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindPosts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/post/api/posts",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"post",
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindPostById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/post/api/posts/:id",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"post",
+								"api",
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "e97de533-9e22-4944-92bc-bdd799b6c785"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"John Roberto's Article\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit\",\r\n    \"author\": \"John\",\r\n    \"user\": {\r\n        \"name\": \"Johnsito2\",\r\n        \"password\": \"123456\",\r\n        \"nickname\": \"John82\",\r\n        \"email\": \"John@mail.com\"\r\n    },\r\n    \"category\": {\r\n        \"name\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}/post/api/posts",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"post",
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Karo's Article\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit\",\r\n    \"author\": \"Karol\",\r\n    \"user\": {\r\n        \"name\": \"Karol\",\r\n        \"password\": \"123456\",\r\n        \"nickname\": \"Karol42\",\r\n        \"email\": \"Karol@mail.com\"\r\n    },\r\n    \"category\": {\r\n        \"name\": 0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}/post/api/posts/:id",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"post",
+								"api",
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "e97de533-9e22-4944-92bc-bdd799b6c787"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/post/api/posts/:id",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"post",
+								"api",
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3c1f69f8-dd26-4d20-8996-7c5912d280f4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
