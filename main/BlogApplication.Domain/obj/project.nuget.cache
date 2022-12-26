@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WrnGnUArW8bcoAbRTPPFEfrU3QNfu2fgsehJ1qgKYf6QKfR2viab1Arhxx+etFV/GakwlbkWjVXJqWVv5kEmTQ==",
+  "dgSpecHash": "gJJVvWrXQ3NXTckwlnVdc5seADxpAbY+xyMRBdRx2ws8kOSFHZR1Xz8FRlRsn4T0EzzbJ62ks3QE3TLml3PfIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj",
+  "projectFilePath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ysnal\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+    "C:\\Users\\ylopez\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

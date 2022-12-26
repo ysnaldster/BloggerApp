@@ -53,19 +53,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ysnal\\.nuget\\packages\\": {}
+    "C:\\Users\\ylopez\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj",
       "projectName": "BlogApplication.Domain",
-      "projectPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj",
-      "packagesPath": "C:\\Users\\ysnal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ysnal\\OneDrive\\Escritorio\\developer\\projects\\bloggerApp\\main\\BlogApplication.Domain\\obj\\",
+      "projectPath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj",
+      "packagesPath": "C:\\Users\\ylopez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ysnal\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ylopez\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -110,7 +110,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
