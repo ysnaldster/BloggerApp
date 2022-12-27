@@ -29,6 +29,14 @@ public class InitData
             Nickname = "Alexa05",
             Email = "alexa@mail.com"
         });
+        users.Add(new User
+        {
+            Id = Guid.Parse("8dd1b477-0d2b-42ae-bfd3-0de9d74b7fee"),
+            Name = "Cristina",
+            Password = "123456",
+            Nickname = "Cristina10",
+            Email = "cristina@mail.com"
+        });
         return users;
     }
 
@@ -96,7 +104,8 @@ public class InitData
         });
         return comments;
     }
-
+    
+    
     public static List<Category> LoadCategories()
     {
         var categories = new List<Category>();
@@ -117,7 +126,7 @@ public class InitData
         });
         return categories;
     }
-
+    
     public static List<Label> LoadLabels()
     {
         var labels = new List<Label>();

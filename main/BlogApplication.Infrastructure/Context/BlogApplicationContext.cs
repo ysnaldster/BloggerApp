@@ -7,8 +7,9 @@ public class BlogApplicationContext : DbContext
 {
     public BlogApplicationContext(DbContextOptions<BlogApplicationContext> options) : base(options)
     {
-    } // Config Fluent API
-
+    }
+    
+    // Config Fluent API
     public DbSet<User> Users { get; set; }
     public DbSet<Post> Posts { get; set; }
     public DbSet<Category> Categories { get; set; }
@@ -40,12 +41,12 @@ public class BlogApplicationContext : DbContext
             post.ToTable("Post");
             post.HasKey(p => p.Id);
             post.HasOne(p => p.User).WithMany(p => p.Posts);
-            post.HasOne(p => p.Category).WithMany(p => p.Posts);
+            //post.HasOne(p => p.Category).WithMany(p => p.Posts);
             post.Property(p => p.Title).IsRequired().HasColumnName("Title").HasMaxLength(100);
             post.Property(p => p.PublicationDate).HasColumnName("Publication_date").HasDefaultValue(DateTime.Now);
             post.Property(p => p.Content).HasColumnName("Content").HasMaxLength(200);
             post.Property(p => p.Author).HasColumnName("Author").HasMaxLength(50);
-            post.Property(p => p.Status).HasColumnName("Status").HasDefaultValue(true);
+            post.Property(p => p.Status).HasColumnName("Status").HasDefaultValue(null);
 
             post.HasData(InitData.LoadPosts());
         });
@@ -63,6 +64,7 @@ public class BlogApplicationContext : DbContext
         });
 
         // Create CategorySchema
+        
         modelBuilder.Entity<Category>(category =>
         {
             category.ToTable("Category");
@@ -70,7 +72,7 @@ public class BlogApplicationContext : DbContext
             category.Property(p => p.Name).HasColumnName("Name");
             category.HasData(InitData.LoadCategories());
         });
-
+        
         // Create LabelSchema
         modelBuilder.Entity<Label>(label =>
         {

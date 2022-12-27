@@ -11,28 +11,40 @@ public class PostController : ControllerBase
     private readonly ILogger<PostController> _logger;
 
     private readonly IPostService _postService;
-
+    
     public PostController(IPostService postService, ILogger<PostController> logger)
     {
         _postService = postService;
         _logger = logger;
     }
-
-    [HttpGet]
-    [Route("connection")]
-    public IActionResult GetConnection()
-    {
-        _postService.GetDatabaseConnection();
-        return Ok("database created");
-    }
-
+    
+    /// <summary>
+    /// CheckPingApiConnection
+    /// </summary>
+    /// <returns>Information string response</returns>
     [HttpGet]
     [Route("ping")]
     public IActionResult Ping()
     {
         return Ok("pong");
     }
-
+    
+    /// <summary>
+    /// CheckCreatedDatabaseConnection
+    /// </summary>
+    /// <returns>StatusCode</returns>
+    [HttpGet]
+    [Route("connection")]
+    public IActionResult GetConnection()
+    {
+        if (_postService.GetDatabaseConnection()) return Ok();
+        return NotFound();
+    }
+    
+    /// <summary>
+    /// GetAllPostList
+    /// </summary>
+    /// <returns></returns>
     [HttpGet]
     [Route("posts")]
     public async Task<ActionResult<IEnumerable<Post>>> GetPosts()

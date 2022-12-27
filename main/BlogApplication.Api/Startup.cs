@@ -24,20 +24,19 @@ public class Startup
            services.AddControllers();
            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
        }
-       public IConfiguration Configuration { get; }
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
+       private IConfiguration Configuration { get; }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
             app.UseHttpsRedirection();
+            app.UseCors();
             app.UseRouting();
             app.UseAuthorization();
-            app.UseSwagger();
-            app.UseSwaggerUI();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
