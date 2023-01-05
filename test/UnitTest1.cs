@@ -19,6 +19,7 @@ public class UnitTest1 : IClassFixture<IntegrationTestFactory<Startup, BlogAppli
     {
         var client = _factory.CreateClient();
         var response = await client.GetAsync("/test/api");
+        //Hello World
         Assert.NotNull(response);
     }
     
