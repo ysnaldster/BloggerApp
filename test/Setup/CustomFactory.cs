@@ -26,22 +26,3 @@ public static class ServiceCollectionExtensions
         context.Database.EnsureCreated();
     }
 }
-
-public class CustomFactory : WebApplicationFactory<Program>
-{
-    //Build before init application 
-    protected override void ConfigureWebHost(IWebHostBuilder builder)
-    {
-        builder.ConfigureTestServices(services =>
-        {
-            //Remove Context
-            services.RemoveDbContext<BlogApplicationContext>();
-            
-            //Add new context to test container
-            services.AddDbContext<BlogApplicationContext>(options => { options.UseNpgsql("DefaultConnection"); });
-            
-            //Created schema
-            services.EnsureDbCreated<BlogApplicationContext>();
-        });
-    } 
-}

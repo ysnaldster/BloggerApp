@@ -63,11 +63,12 @@ public class PostRepository : IPostRepository
     public async Task<Post?> DeletePost(Guid id)
     {
         var postToDelete = await _context.Posts
+            .Where(s => s.Id == id)
             .Include(p => p.User)
             .Include(p => p.Category)
-            .SingleOrDefaultAsync(p => p.Id == id);
+            .SingleOrDefaultAsync();
         if (postToDelete == null) return postToDelete;
-        _context.Remove(postToDelete);
+        _context.Remove(postToDelete!);
         await _context.SaveChangesAsync();
         return postToDelete;
     }

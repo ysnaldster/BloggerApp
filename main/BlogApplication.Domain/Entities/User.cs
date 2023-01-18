@@ -12,6 +12,18 @@ public class User
     public DateTime CreationDate { get; set; }
     public DateTime UpdateDate { get; set; }
 
+    public User(Guid id, string name, string password, string nickname, string email, DateTime creationDate, DateTime updateDate)
+    {
+        Id = id;
+        Name = name;
+        Password = password;
+        Nickname = nickname;
+        Email = email;
+        UpdateDate = updateDate;
+        CreationDate = creationDate;
+    }
+    
+    public User(){}
     [JsonIgnore] public virtual ICollection<Post>? Posts { get; set; }
 
     [JsonIgnore] public virtual ICollection<Comment>? Comments { get; set; }

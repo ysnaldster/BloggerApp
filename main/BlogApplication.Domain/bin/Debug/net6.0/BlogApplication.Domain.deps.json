@@ -8,10 +8,22 @@
     ".NETCoreApp,Version=v6.0": {
       "BlogApplication.Domain/1.0.0": {
         "dependencies": {
+          "FluentAssertions": "6.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
         },
         "runtime": {
           "BlogApplication.Domain.dll": {}
+        }
+      },
+      "FluentAssertions/6.0.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.4.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/FluentAssertions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
@@ -19,6 +31,33 @@
           "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.4.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.25519.3"
           }
         }
       }
@@ -30,12 +69,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "FluentAssertions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/nZSISO5mORW/z/MktODY6ncNuOjRF8OGf3gO3JWVoA293MC9ZQbdfPBDNKNMN/FcHghRQKyJakqABguBMtGQw==",
+      "path": "fluentassertions/6.0.0",
+      "hashPath": "fluentassertions.6.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
       "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gWwQv/Ug1qWJmHCmN17nAbxJYmQBM/E94QxKLksvUiiKB1Ld3Sc/eK1lgmbSjDFxkQhVuayI/cGFZhpBSodLrg==",
+      "path": "system.configuration.configurationmanager/4.4.0",
+      "hashPath": "system.configuration.configurationmanager.4.4.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+      "path": "system.security.cryptography.protecteddata/4.4.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
     }
   }
 }

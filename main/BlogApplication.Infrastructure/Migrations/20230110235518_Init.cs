@@ -42,8 +42,8 @@ namespace BlogApplication.Infrastructure.Migrations
                     Password = table.Column<string>(type: "text", nullable: false),
                     Nickname = table.Column<string>(type: "text", nullable: true),
                     Email = table.Column<string>(type: "text", nullable: false),
-                    Creation_date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false, defaultValue: new DateTime(2022, 12, 27, 10, 22, 58, 874, DateTimeKind.Local).AddTicks(5822)),
-                    Update_date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false, defaultValue: new DateTime(2022, 12, 27, 10, 22, 58, 874, DateTimeKind.Local).AddTicks(6285))
+                    Creation_date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false, defaultValue: new DateTime(2023, 1, 10, 18, 55, 17, 789, DateTimeKind.Local).AddTicks(3988)),
+                    Update_date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false, defaultValue: new DateTime(2023, 1, 10, 18, 55, 17, 789, DateTimeKind.Local).AddTicks(4245))
                 },
                 constraints: table =>
                 {
@@ -58,7 +58,7 @@ namespace BlogApplication.Infrastructure.Migrations
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
                     CategoryId = table.Column<Guid>(type: "uuid", nullable: false),
                     Title = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    Publication_date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false, defaultValue: new DateTime(2022, 12, 27, 10, 22, 58, 875, DateTimeKind.Local).AddTicks(707)),
+                    Publication_date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false, defaultValue: new DateTime(2023, 1, 10, 18, 55, 17, 789, DateTimeKind.Local).AddTicks(8226)),
                     Content = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
                     Author = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: true),
                     Status = table.Column<bool>(type: "boolean", nullable: false)
@@ -85,10 +85,10 @@ namespace BlogApplication.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    PostId = table.Column<Guid>(type: "uuid", nullable: true),
                     UserId = table.Column<Guid>(type: "uuid", nullable: true),
+                    PostId = table.Column<Guid>(type: "uuid", nullable: true),
                     Content = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: true),
-                    Publication_date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false, defaultValue: new DateTime(2022, 12, 27, 10, 22, 58, 875, DateTimeKind.Local).AddTicks(7691))
+                    Publication_date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false, defaultValue: new DateTime(2023, 1, 10, 18, 55, 17, 790, DateTimeKind.Local).AddTicks(2935))
                 },
                 constraints: table =>
                 {
@@ -97,12 +97,14 @@ namespace BlogApplication.Infrastructure.Migrations
                         name: "FK_Comment_Post_PostId",
                         column: x => x.PostId,
                         principalTable: "Post",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Comment_User_UserId",
                         column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

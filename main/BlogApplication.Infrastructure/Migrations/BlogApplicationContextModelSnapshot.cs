@@ -71,7 +71,7 @@ namespace BlogApplication.Infrastructure.Migrations
                     b.Property<DateTime>("PublicationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2022, 12, 27, 10, 29, 28, 489, DateTimeKind.Local).AddTicks(2305))
+                        .HasDefaultValue(new DateTime(2023, 1, 10, 18, 55, 17, 790, DateTimeKind.Local).AddTicks(2935))
                         .HasColumnName("Publication_date");
 
                     b.Property<Guid?>("UserId")
@@ -166,7 +166,7 @@ namespace BlogApplication.Infrastructure.Migrations
                     b.Property<DateTime>("PublicationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2022, 12, 27, 10, 29, 28, 479, DateTimeKind.Local).AddTicks(772))
+                        .HasDefaultValue(new DateTime(2023, 1, 10, 18, 55, 17, 789, DateTimeKind.Local).AddTicks(8226))
                         .HasColumnName("Publication_date");
 
                     b.Property<bool>("Status")
@@ -276,7 +276,7 @@ namespace BlogApplication.Infrastructure.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2022, 12, 27, 10, 29, 28, 478, DateTimeKind.Local).AddTicks(7528))
+                        .HasDefaultValue(new DateTime(2023, 1, 10, 18, 55, 17, 789, DateTimeKind.Local).AddTicks(3988))
                         .HasColumnName("Creation_date");
 
                     b.Property<string>("Email")
@@ -302,7 +302,7 @@ namespace BlogApplication.Infrastructure.Migrations
                     b.Property<DateTime>("UpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2022, 12, 27, 10, 29, 28, 478, DateTimeKind.Local).AddTicks(7837))
+                        .HasDefaultValue(new DateTime(2023, 1, 10, 18, 55, 17, 789, DateTimeKind.Local).AddTicks(4245))
                         .HasColumnName("Update_date");
 
                     b.HasKey("Id");
@@ -356,11 +356,13 @@ namespace BlogApplication.Infrastructure.Migrations
                 {
                     b.HasOne("BlogApplication.Domain.Entities.Post", "Post")
                         .WithMany("Comments")
-                        .HasForeignKey("PostId");
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("BlogApplication.Domain.Entities.User", "User")
                         .WithMany("Comments")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Post");
 

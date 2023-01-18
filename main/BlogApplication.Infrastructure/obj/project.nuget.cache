@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WbpeE++3ZnuEzHHSNiW1ILQKmspa6uGv55dQL6L3ClViZQpYmVHq3Pb6LbRyLDE807y3nWGmOhbZJUOEfBxBSA==",
+  "dgSpecHash": "CFBaaN6NNutsaaYKjz9x+HYzfs4AGFh875No9N8oMxV5T+AFcQfj0uDDZ+c1J5z3Jn2o+UJJpIIRJDxZCi296w==",
   "success": true,
   "projectFilePath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Infrastructure\\BlogApplication.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ylopez\\.nuget\\packages\\fluentassertions\\6.0.0\\fluentassertions.6.0.0.nupkg.sha512",
     "C:\\Users\\ylopez\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ylopez\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.9\\microsoft.entityframeworkcore.6.0.9.nupkg.sha512",
     "C:\\Users\\ylopez\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.9\\microsoft.entityframeworkcore.abstractions.6.0.9.nupkg.sha512",
@@ -23,8 +24,10 @@
     "C:\\Users\\ylopez\\.nuget\\packages\\npgsql\\6.0.7\\npgsql.6.0.7.nupkg.sha512",
     "C:\\Users\\ylopez\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.7\\npgsql.entityframeworkcore.postgresql.6.0.7.nupkg.sha512",
     "C:\\Users\\ylopez\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylopez\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
     "C:\\Users\\ylopez\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
-    "C:\\Users\\ylopez\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\ylopez\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylopez\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
   ],
   "logs": []
 }

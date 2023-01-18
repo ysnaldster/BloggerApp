@@ -36,12 +36,13 @@ public class BlogApplicationContext : DbContext
         });
 
         // Create PostSchema
+        
         modelBuilder.Entity<Post>(post =>
         {
             post.ToTable("Post");
             post.HasKey(p => p.Id);
             post.HasOne(p => p.User).WithMany(p => p.Posts);
-            //post.HasOne(p => p.Category).WithMany(p => p.Posts);
+            post.HasOne(p => p.Category).WithMany(p => p.Posts);
             post.Property(p => p.Title).IsRequired().HasColumnName("Title").HasMaxLength(100);
             post.Property(p => p.PublicationDate).HasColumnName("Publication_date").HasDefaultValue(DateTime.Now);
             post.Property(p => p.Content).HasColumnName("Content").HasMaxLength(200);
@@ -50,14 +51,14 @@ public class BlogApplicationContext : DbContext
 
             post.HasData(InitData.LoadPosts());
         });
-
+        
         // Create CommentSchema
         modelBuilder.Entity<Comment>(comment =>
         {
             comment.ToTable("Comment");
             comment.HasKey(p => p.Id);
-            comment.HasOne(p => p.Post).WithMany(p => p.Comments);
-            comment.HasOne(p => p.User).WithMany(p => p.Comments);
+            comment.HasOne(p => p.Post).WithMany(p => p.Comments).OnDelete(DeleteBehavior.Cascade);
+            comment.HasOne(p => p.User).WithMany(p => p.Comments).OnDelete(DeleteBehavior.Cascade);
             comment.Property(p => p.Content).HasMaxLength(200).HasColumnName("Content").IsRequired(false);
             comment.Property(p => p.PublicationDate).HasDefaultValue(DateTime.Now).HasColumnName("Publication_date");
             comment.HasData(InitData.LoadComments());

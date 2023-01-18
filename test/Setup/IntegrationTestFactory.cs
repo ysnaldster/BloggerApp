@@ -24,6 +24,7 @@ public class IntegrationTestFactory <TProgram, TDbContext>: WebApplicationFactor
                 Username = "postgres",
                 Password = "postgres",
             })
+            .WithExposedPort("5082")
             .WithImage("postgres:latest")
             .WithCleanUp(true)
             .Build();
