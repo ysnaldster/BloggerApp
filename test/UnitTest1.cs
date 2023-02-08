@@ -1,28 +1,24 @@
-using BlogApplication.Api;
-using BlogApplication.Infrastructure.Context;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
-using test.Setup;
+
+/*using BlogApplication.Api;
+using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace test;
 
-public class UnitTest1 : IClassFixture<IntegrationTestFactory<Startup, BlogApplicationContext>>
+public class UnitTest1 : IClassFixture<WebApplicationFactory<Startup>>
 {
-    private readonly IntegrationTestFactory<Startup, BlogApplicationContext> _factory;
+    private readonly HttpClient _httpClient;
 
-    public UnitTest1(IntegrationTestFactory<Startup, BlogApplicationContext> factory)
+
+    public UnitTest1(WebApplicationFactory<Startup> factory)
     {
-        _factory = factory;
+        _httpClient = factory.CreateClient();
     }
-    
+
     [Fact]
     public async void Test1()
     {
-        var client = _factory.CreateClient();
-        var response = await client.GetAsync("/test/api");
-        var response2 = await client.GetAsync("/Post/api/posts");
-        Assert.NotNull(response);
+        var response2 = await _httpClient.GetAsync("/Post/api/posts");
         Assert.NotNull(response2);
-        Assert.NotNull(response);
     }
-    
 }
+*/

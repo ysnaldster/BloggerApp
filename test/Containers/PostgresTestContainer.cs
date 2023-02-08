@@ -9,13 +9,13 @@ public class PostgresTestContainer : IAsyncLifetime
 {
 
     private readonly PostgreSqlTestcontainer _postgreSqlTestcontainer;
-    private AppFactoryTestContainer _appFactoryTestContainer;
-    private string _connectionString;
+    //private AppFactoryTestContainer _appFactoryTestContainer;
+    //private string _connectionString;
 
-    public PostgresTestContainer(AppFactoryTestContainer appFactoryTestContainer, string connectionString)
+    public PostgresTestContainer()
     {
-        _appFactoryTestContainer = appFactoryTestContainer;
-        _connectionString = connectionString;
+        //_appFactoryTestContainer = appFactoryTestContainer;
+        //_connectionString = connectionString;
         _postgreSqlTestcontainer = new TestcontainersBuilder<PostgreSqlTestcontainer>()
             .WithDatabase(new PostgreSqlTestcontainerConfiguration
             {
@@ -27,19 +27,20 @@ public class PostgresTestContainer : IAsyncLifetime
             .WithImage("postgres:latest")
             .WithCleanUp(true)
             .Build();
+        //_connectionString = _postgreSqlTestcontainer.ConnectionString;
     }
     
     private Task ConfigurePostgresqlContainer()
     {
-        _connectionString = _postgreSqlTestcontainer.ConnectionString;
-        _appFactoryTestContainer = new AppFactoryTestContainer(_connectionString);
+        //_connectionString = _postgreSqlTestcontainer.ConnectionString;
+        //_appFactoryTestContainer = new AppFactoryTestContainer(_connectionString);
         return Task.CompletedTask;
     }
 
     public async Task InitializeAsync()
     {
         await _postgreSqlTestcontainer.StartAsync();
-        await ConfigurePostgresqlContainer();
+        //await ConfigurePostgresqlContainer();
     }
 
     public async Task DisposeAsync()

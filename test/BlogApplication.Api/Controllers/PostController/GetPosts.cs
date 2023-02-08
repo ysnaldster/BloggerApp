@@ -3,6 +3,7 @@ using BlogApplication.Api;
 using BlogApplication.Domain.Entities;
 using BlogApplication.Infrastructure.Context;
 using FluentAssertions;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 using test.Setup;
 
@@ -11,7 +12,7 @@ namespace test.BlogApplication.Api.Controllers.PostController;
 public class GetPosts : IClassFixture<IntegrationTestFactory<Startup, BlogApplicationContext>>
 {
     private readonly IntegrationTestFactory<Startup, BlogApplicationContext> _factory;
-
+    
     public GetPosts(IntegrationTestFactory<Startup, BlogApplicationContext> factory)
     {
         _factory = factory;

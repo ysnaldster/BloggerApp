@@ -1,7 +1,10 @@
-﻿namespace test.Containers;
+﻿using test.Setup;
+namespace test.Containers;
 
 [CollectionDefinition(nameof(IntegrationContainerSetup))]
-public class IntegrationContainerSetup
+public class IntegrationContainerSetup : 
+    ICollectionFixture<PostgresTestContainer>
+    //ICollectionFixture<AppFactoryTestContainer>
 {
-    
+       
 }

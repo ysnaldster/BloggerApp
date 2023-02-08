@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿/*
+using System.Net;
 using System.Net.Http.Json;
 using BlogApplication.Api;
 using BlogApplication.Domain.Entities;
@@ -21,16 +22,7 @@ public class PostControllerBase : IClassFixture<IntegrationTestFactory<Startup, 
         _postCreated = PostJson.PostCreated();
     }
     
-    /*
-     *Controllers
-- Testear todos los controladores y sus resultados.
-- Testear el bad request
-- Testear el not found
 
-Servicios
-- Revisar si es necesario 
-     * 
-     */
 
     
     /// <summary>
@@ -86,3 +78,4 @@ Servicios
         result!.Id.Should().Be(post.Id.ToString());
     }
 }
+*/

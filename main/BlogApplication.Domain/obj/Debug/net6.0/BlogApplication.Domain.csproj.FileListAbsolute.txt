@@ -31,6 +31,6 @@ C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Do
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.AssemblyInfo.cs
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.csproj.CoreCompileInputs.cache
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.dll
-C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\refint\BlogApplication.Domain.dll
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\BlogApplication.Domain.pdb
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Debug\net6.0\ref\BlogApplication.Domain.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\bin\Debug\net6.0\ref\BlogApplication.Domain.dll
