@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "bOLxSzzEHlNjd303VAjCY7Lyp4GvQkQYljXAxMsfymkYY/LvLD07Xy99SJ0twtHkt7tcpBVvkGjIAUNUuIb3Dg==",
+  "dgSpecHash": "ZMSEjpaH9agg9E/3Ekk9531YOv0dY+WOQxsfQKWzO9Pm3xFrCzqnyI9NU6QwBqEco0M4Qk0XVuCgkPIrJDDZZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\test\\test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ylopez\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
+    "C:\\Users\\ylopez\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\ylopez\\.nuget\\packages\\docker.dotnet\\3.125.12\\docker.dotnet.3.125.12.nupkg.sha512",
     "C:\\Users\\ylopez\\.nuget\\packages\\docker.dotnet.x509\\3.125.12\\docker.dotnet.x509.3.125.12.nupkg.sha512",
     "C:\\Users\\ylopez\\.nuget\\packages\\fluentassertions\\6.0.0\\fluentassertions.6.0.0.nupkg.sha512",

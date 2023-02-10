@@ -1,12 +1,8 @@
-﻿using BlogApplication.Infrastructure.Context;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.AspNetCore.TestHost;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 
 namespace test.Setup;
+
 // Config environment app class, this use a Host and server
 public static class ServiceCollectionExtensions
 {

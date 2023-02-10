@@ -1,5 +1,4 @@
-﻿using test.Setup;
-namespace test.Containers;
+﻿namespace test.Configuration.Containers;
 
 [CollectionDefinition(nameof(IntegrationContainerSetup))]
 public class IntegrationContainerSetup : 

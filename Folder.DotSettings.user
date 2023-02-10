@@ -1,42 +1,11 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\ylopez\AppData\Local\JetBrains\Rider2022.3\resharper-host\temp\Rider\vAny\CoverageData\_bloggerApp.19\Snapshot\snapshot.utdcvr</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=09835f99_002D1264_002D4a7a_002Dbf6b_002D363b33ee438e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CreatePostGivePostDataShouldReturnDataInserted" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::net6.0::test.BlogApplication.Api.Controllers.PostController.CreatePostShouldReturnAttributesAreAsserted&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=440f4830_002D4ffd_002D4aa8_002D9644_002D29b7d20350b6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetPostsShouldReturnPostsStructure" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::net6.0::test.BlogApplication.Api.Controllers.PostController&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7938ab48_002Dde1f_002D44d6_002D87b1_002D5a2c6a1cce7a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CreatePostShouldReturnAttributesAreAsserted" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::net6.0::test.BlogApplication.Api.Controllers.PostController.UpdateUser&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=83b812d0_002Da613_002D4767_002Dbcb8_002D2f5f9eae2791/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetPostsShouldReturnPostsStructure #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::net6.0::test.BlogApplication.Api.Controllers.PostController&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8491994d_002D7905_002D4b8b_002D9e86_002Db0e6e8e6df91/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateUser" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::net6.0::test.BlogApplication.Api.Controllers.PostController.UpdatePost&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::net6.0::test.BlogApplication.Api.Controllers.PostController.GetPosts&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::net6.0::test.BlogApplication.Api.Controllers.PostController.GetPost&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::net6.0::test.BlogApplication.Api.Controllers.PostController.CreatePost&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::net6.0::test.BlogApplication.Api.Controllers.PostController.DeletePost&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=87e7799b_002D5e30_002D4564_002Dbae7_002D6c684dbb693d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PostRepositoryTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\test" Presentation="&amp;lt;test&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d455fb84_002Dde53_002D43b2_002D8702_002D233dde77d59b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateUser #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Or&gt;&#xD;
-    &lt;ProjectFile&gt;E58F4AA9-B1CC-A69B-1C4C-0873D391E987/d:BlogApplication.Api/d:Controllers/d:PostController/f:CreatePost.cs&lt;/ProjectFile&gt;&#xD;
-    &lt;TestAncestor&gt;&#xD;
-      &lt;TestId&gt;xUnit::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::net6.0::test.UnitTest1.Test1&lt;/TestId&gt;&#xD;
-    &lt;/TestAncestor&gt;&#xD;
-  &lt;/Or&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+	</wpf:ResourceDictionary>
