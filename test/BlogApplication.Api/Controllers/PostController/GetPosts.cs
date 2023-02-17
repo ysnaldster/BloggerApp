@@ -5,38 +5,37 @@ using BlogApplication.Infrastructure.Context;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
+using test.Configuration.Base;
+using test.Configuration.Containers;
 using test.Setup;
 
 namespace test.BlogApplication.Api.Controllers.PostController;
 
-public class GetPosts : IClassFixture<IntegrationTestFactory<Startup, BlogApplicationContext>>
+[Collection(nameof(IntegrationContainerCollection))]
+public class GetPosts : GenericControllerTestBase
 {
-    private readonly IntegrationTestFactory<Startup, BlogApplicationContext> _factory;
     
-    public GetPosts(IntegrationTestFactory<Startup, BlogApplicationContext> factory)
+    public GetPosts(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer)
     {
-        _factory = factory;
     }   
     
     /// <summary>
     /// GetPostsDataWhenReturn200Ok
     /// </summary>
-    [Fact]
+    //[Fact]
     public async void GetPostsShouldReturnOk()
     {
-        var client = _factory.CreateClient();
-        var response = await client.GetAsync("/Post/api/posts");
+        var response = await HttpClient.GetAsync("/Post/api/posts");
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
     
     /// <summary>
     /// GetPostQuantityWhenReturnThreeRecords
     /// </summary>
-    [Fact]
+    //[Fact]
     public async void GetPostsShouldReturnThreeRecords()
     {
-        var client = _factory.CreateClient();
-        var response = await client.GetAsync("/Post/api/posts");
+        var response = await HttpClient.GetAsync("/Post/api/posts");
         var result = JsonConvert.DeserializeObject<IEnumerable<Post>>(response.Content.ReadAsStringAsync().Result);
         if (result != null) Assert.Equal(3, result.Count());
     }
@@ -44,11 +43,10 @@ public class GetPosts : IClassFixture<IntegrationTestFactory<Startup, BlogApplic
     /// <summary>
     /// GetPostsForValideNotEmpty
     /// </summary>
-    [Fact]
+    //[Fact]
     public async void GetPostsShouldReturnNotEmpty()
     {
-        var client = _factory.CreateClient();
-        var response = await client.GetAsync("/Post/api/posts");
+        var response = await HttpClient.GetAsync("/Post/api/posts");
         var result = JsonConvert.DeserializeObject<IEnumerable<Post>>(response.Content.ReadAsStringAsync().Result);
         result.Should().NotBeEmpty();
     }

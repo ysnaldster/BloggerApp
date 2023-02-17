@@ -1,24 +1,19 @@
-﻿using System.Net;
-using System.Net.Http.Json;
-using BlogApplication.Api;
+﻿using System.Net.Http.Json;
 using BlogApplication.Domain.Entities;
-using BlogApplication.Infrastructure.Context;
 using FluentAssertions;
-using test.Features;
-using test.Setup;
+using test.Configuration.Base;
+using test.Configuration.Containers;
+using test.Utils;
 
 namespace test.BlogApplication.Api.Controllers.PostController;
 
-public class CreatePost : IClassFixture<IntegrationTestFactory<Startup, BlogApplicationContext>>
+[Collection(nameof(IntegrationContainerCollection))]
+public class CreatePost : TestConfigurationBase
 {
-    private readonly IntegrationTestFactory<Startup, BlogApplicationContext> _factory;
     private readonly Post _postCreated;
-    
-    public CreatePost(IntegrationTestFactory<Startup, BlogApplicationContext> factory)
+    public CreatePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer)
     {
-        _factory = factory;
         _postCreated = PostJson.PostCreated();
-
     }
 
     /// <summary>
@@ -27,25 +22,11 @@ public class CreatePost : IClassFixture<IntegrationTestFactory<Startup, BlogAppl
     [Fact]
     public async void CreatePostShouldReturnAttributesAreAsserted()
     {
-        var client = _factory.CreateClient();
-        var uri = new Uri("http://localhost:5082/Post/api/posts");
-        var response = await client.PostAsync(uri, JsonContent.Create(_postCreated));
+        var uri = new Uri($"{HttpClient.BaseAddress}Post/api/posts");
+        var response = await HttpClient.PostAsync(uri, JsonContent.Create(_postCreated));
         var result = response.Content.ReadFromJsonAsync<Post>().Result;
         result!.Id.Should().Be(_postCreated.Id.ToString());
         result!.Author.Should().Be(_postCreated.Author);
     }
-    
-    /*
-    /// <summary>
-    /// CreateNewPostValidateStatusCode
-    /// </summary>
-    [Fact]
-    public async void CreatePostGivePostDataShouldReturn200StatusCode()
-    {
-        var client = _factory.CreateClient();
-        var uri = new Uri("http://localhost:5082/Post/api/posts");
-        var response = await client.PostAsync(uri, JsonContent.Create(_postCreated));
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-    }
-    */
+
 }

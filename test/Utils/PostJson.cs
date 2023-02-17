@@ -1,6 +1,6 @@
 ﻿using BlogApplication.Domain.Entities;
 
-namespace test.Features;
+namespace test.Utils;
 
 public abstract class PostJson
 {

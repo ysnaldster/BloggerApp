@@ -39,7 +39,7 @@ public class BlogApplicationContext : DbContext
         
         modelBuilder.Entity<Post>(post =>
         {
-            post.ToTable("Post");
+            post.ToTable("post");
             post.HasKey(p => p.Id);
             post.HasOne(p => p.User).WithMany(p => p.Posts);
             post.HasOne(p => p.Category).WithMany(p => p.Posts);

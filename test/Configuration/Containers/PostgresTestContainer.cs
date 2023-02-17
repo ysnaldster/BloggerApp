@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using test.Configuration.Clients;
+using test.Clients;
 using test.Setup;
 
 namespace test.Configuration.Containers;
@@ -17,8 +17,10 @@ public class PostgresTestContainer : WebApplicationFactory<Startup>, IAsyncLifet
 {
 
     private readonly PostgreSqlTestcontainer _postgresqlContainer;
-    private TestPostgresqlClient _clientForTest;
-    //private string _connectionString = "Host = localhost; Port = 5432; Database = test_db; Username = postgres; Password = postgres";
+    private TestPosgreSqlClient _clientForTest;
+    private string _connectionString;
+
+
 
     public PostgresTestContainer()
     {
@@ -45,38 +47,33 @@ public class PostgresTestContainer : WebApplicationFactory<Startup>, IAsyncLifet
         });
     }
     
+    private void ConfigurePostgresqlContainer()
+    {
+        _connectionString = _postgresqlContainer.ConnectionString;
+        _clientForTest = new TestPosgreSqlClient(_connectionString);
+    }
+
+    
     public async Task InitializeAsync()
     {
         await _postgresqlContainer.StartAsync();
-        //await ConfigurePostgresqlContainer();
+        ConfigurePostgresqlContainer();
     }
-
-    private async Task ConfigurePostgresqlContainer()
-    {
-        //_connectionString = _postgresqlContainer.ConnectionString;
-        //_clientForTest = new TestPostgresqlClient(_connectionString);
-        await _clientForTest.CreateTablesIfNotExists();
-    }
-
-    public async Task DisposeAsync()
+    
+    public new async Task DisposeAsync()
     {
         await _postgresqlContainer.StopAsync();
         await _postgresqlContainer.DisposeAsync();
     }
-
+    
     public async Task PopulateTablesAsync()
     {
         await _clientForTest.PopulateTables();
     }
-
-    public async Task DeleteAllItemsFromTablesAsync()
+    
+    public async Task DeleteAllItemsFromTableAsync()
     {
-        await _clientForTest.DeleteAllItemsFromTablesAsync();
+        await _clientForTest.DeleteAllItemsFromTableAsync("post");
     }
-
-    public async Task TruncateAllTablesAndRestartSequencesAsync()
-    {
-        await _clientForTest.TruncateAllTablesAndRestartSequencesAsync();
-    }
-
+    
 }
