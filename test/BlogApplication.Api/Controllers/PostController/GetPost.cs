@@ -13,30 +13,19 @@ using test.Utils;
 namespace test.BlogApplication.Api.Controllers.PostController;
 
 [Collection(nameof(IntegrationContainerCollection))]
-public class GetPost : IClassFixture<IntegrationTestFactory<Startup, BlogApplicationContext>>
+public class GetPost : TestConfigurationBase
 {
     private readonly Post? _post;
-    private readonly IntegrationTestFactory<Startup, BlogApplicationContext> _factory;
-    protected readonly HttpClient HttpClient;
-
-
-    public GetPost(IntegrationTestFactory<Startup, BlogApplicationContext> factory)
+    
+    public GetPost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, "post")
     {
-        _factory = factory;
         _post = PostJson.BuildModel();
-        HttpClient = factory.CreateDefaultClient();
-        HttpClient.BaseAddress = new Uri("http://localhost:5082/");
+    }
 
-    }
-    /*
-    public GetPost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer)
-    {
-    }
-    */
     /// <summary>
     /// GetPostDataWhenReturn200Ok
     /// </summary>
-    //[Fact]
+    [Fact]
     public async void GetPostShouldReturnOk()
     {
         var response = await HttpClient.GetAsync($"/Post/api/posts/{_post!.Id}");
@@ -46,7 +35,7 @@ public class GetPost : IClassFixture<IntegrationTestFactory<Startup, BlogApplica
     /// <summary>
     /// GetPostValidateIdAndAuthorValues
     /// </summary>
-    //[Fact]
+    [Fact]
     public async void GetPostShouldReturnAttributesAreAsserted()
     {
         var response = await HttpClient.GetAsync($"/Post/api/posts/{_post!.Id}");

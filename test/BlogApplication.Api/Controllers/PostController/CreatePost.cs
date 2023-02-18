@@ -11,7 +11,7 @@ namespace test.BlogApplication.Api.Controllers.PostController;
 public class CreatePost : TestConfigurationBase
 {
     private readonly Post _postCreated;
-    public CreatePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer)
+    public CreatePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, "post")
     {
         _postCreated = PostJson.PostCreated();
     }

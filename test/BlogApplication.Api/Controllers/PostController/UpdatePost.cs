@@ -12,12 +12,12 @@ using test.Utils;
 namespace test.BlogApplication.Api.Controllers.PostController;
 
 [Collection(nameof(IntegrationContainerCollection))]
-public class UpdatePost : GenericControllerTestBase
+public class UpdatePost : TestConfigurationBase
 {
     private readonly Post? _post;
     private Post? _postUpdated;
 
-    public UpdatePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer)
+    public UpdatePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, "post")
     {
         _post = PostJson.BuildModel( author : PostJson.AuthorToChange, title : PostJson.Title);
     }
@@ -25,7 +25,7 @@ public class UpdatePost : GenericControllerTestBase
     /// <summary>
     /// UpdateHttpStatusOkWhenUpdatePost
     /// </summary>
-    //[Fact]
+    [Fact]
     public async void UpdatePostShouldReturn200StatusCode()
     {
         var uri = new Uri($"{HttpClient.BaseAddress}Post/api/posts/{_post!.Id}");
@@ -37,7 +37,7 @@ public class UpdatePost : GenericControllerTestBase
     /// <summary>
     /// ComparePostUpdatedAndInitPost
     /// </summary>
-    //[Fact]
+    [Fact]
     public async void UpdatePostShouldReturnAttributesAreAsserted()
     {
         var uri = new Uri($"{HttpClient.BaseAddress}Post/api/posts/{_post!.Id}");

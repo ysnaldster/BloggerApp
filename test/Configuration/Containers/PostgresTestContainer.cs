@@ -20,8 +20,6 @@ public class PostgresTestContainer : WebApplicationFactory<Startup>, IAsyncLifet
     private TestPosgreSqlClient _clientForTest;
     private string _connectionString;
 
-
-
     public PostgresTestContainer()
     {
         _postgresqlContainer = new TestcontainersBuilder<PostgreSqlTestcontainer>()
@@ -36,7 +34,7 @@ public class PostgresTestContainer : WebApplicationFactory<Startup>, IAsyncLifet
             .WithCleanUp(true)
             .Build();
     }
-    
+
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.ConfigureTestServices(services =>
@@ -66,14 +64,15 @@ public class PostgresTestContainer : WebApplicationFactory<Startup>, IAsyncLifet
         await _postgresqlContainer.DisposeAsync();
     }
     
-    public async Task PopulateTablesAsync()
+    public async Task PopulateTablesAsync(string schema)
     {
-        await _clientForTest.PopulateTables();
+        await _clientForTest.PopulateTables(schema);
     }
     
-    public async Task DeleteAllItemsFromTableAsync()
+    public async Task DeleteAllItemsFromTableAsync(string schema)
     {
-        await _clientForTest.DeleteAllItemsFromTableAsync("post");
+  
+        await _clientForTest.DeleteAllItemsFromTableAsync(schema);
     }
     
 }

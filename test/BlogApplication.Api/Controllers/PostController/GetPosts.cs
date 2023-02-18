@@ -12,17 +12,16 @@ using test.Setup;
 namespace test.BlogApplication.Api.Controllers.PostController;
 
 [Collection(nameof(IntegrationContainerCollection))]
-public class GetPosts : GenericControllerTestBase
+public class GetPosts : TestConfigurationBase
 {
-    
-    public GetPosts(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer)
+    public GetPosts(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, "post")
     {
     }   
     
     /// <summary>
     /// GetPostsDataWhenReturn200Ok
     /// </summary>
-    //[Fact]
+    [Fact]
     public async void GetPostsShouldReturnOk()
     {
         var response = await HttpClient.GetAsync("/Post/api/posts");
@@ -32,7 +31,7 @@ public class GetPosts : GenericControllerTestBase
     /// <summary>
     /// GetPostQuantityWhenReturnThreeRecords
     /// </summary>
-    //[Fact]
+    [Fact]
     public async void GetPostsShouldReturnThreeRecords()
     {
         var response = await HttpClient.GetAsync("/Post/api/posts");
@@ -43,7 +42,7 @@ public class GetPosts : GenericControllerTestBase
     /// <summary>
     /// GetPostsForValideNotEmpty
     /// </summary>
-    //[Fact]
+    [Fact]
     public async void GetPostsShouldReturnNotEmpty()
     {
         var response = await HttpClient.GetAsync("/Post/api/posts");

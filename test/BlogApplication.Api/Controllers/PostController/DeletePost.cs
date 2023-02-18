@@ -13,29 +13,16 @@ using test.Utils;
 namespace test.BlogApplication.Api.Controllers.PostController;
 
 [Collection(nameof(IntegrationContainerCollection))]
-public class DeletePost :  IClassFixture<IntegrationTestFactory<Startup, BlogApplicationContext>>
+public class DeletePost :  TestConfigurationBase
 {
-    private readonly IntegrationTestFactory<Startup, BlogApplicationContext> _factory;
     private readonly Post? _post;
-    protected readonly HttpClient HttpClient;
-
     
-    public DeletePost(IntegrationTestFactory<Startup, BlogApplicationContext> factory)
+    public DeletePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, "post")
     {
-        _factory = factory;
-        HttpClient = factory.CreateDefaultClient();
-        HttpClient.BaseAddress = new Uri("http://localhost:5082/");
         _post =  PostJson.BuildModel();
 
     }
-  
-    /*    
-    public DeletePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer)
-    {
-        
-    }   
-    */
-    //[Fact]
+    [Fact]
     public async void DeletePostShouldReturn200StatusCode()
     {
         var uri = new Uri($"{HttpClient.BaseAddress}Post/api/posts/{_post!.Id}");
