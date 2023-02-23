@@ -1,15 +1,15 @@
 using BlogApplication.Domain.Entities;
 
-namespace BlogApplication.Domain.Interfaces;
+namespace BlogApplication.Domain.Repositories;
 
-public interface IPostService
+public interface IPostRepository
 {
     public bool GetDatabaseConnection();
     public Task<IEnumerable<Post>> GetAllPosts();
 
-    public Task<Post?> GetPost(Guid id);
+    public Task<Post?> GetPost(Guid? id);
 
-    public Task<Post> SavePost(Post post);
+    public Task<Post> SavePost(Post? post);
 
     public Task<Post> UpdatePost(Guid? id, Post? post);
 

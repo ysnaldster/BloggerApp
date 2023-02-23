@@ -4,6 +4,7 @@ using FluentAssertions;
 using test.Configuration.Base;
 using test.Configuration.Containers;
 using test.Utils;
+using test.Utils.JSON;
 
 namespace test.BlogApplication.Api.Controllers.PostController;
 
@@ -11,7 +12,7 @@ namespace test.BlogApplication.Api.Controllers.PostController;
 public class CreatePost : TestConfigurationBase
 {
     private readonly Post _postCreated;
-    public CreatePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, "post")
+    public CreatePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, DatabaseManager.Tables[0])
     {
         _postCreated = PostJson.PostCreated();
     }

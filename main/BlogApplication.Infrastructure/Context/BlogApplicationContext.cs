@@ -23,7 +23,7 @@ public class BlogApplicationContext : DbContext
         // Create UserSchema
         modelBuilder.Entity<User>(user =>
         {
-            user.ToTable("User");
+            user.ToTable("net_user");
             user.HasKey(p => p.Id);
             user.Property(p => p.Name).IsRequired().HasMaxLength(50).HasColumnName("Name");
             user.Property(p => p.Password).IsRequired().HasColumnName("Password");
@@ -55,7 +55,7 @@ public class BlogApplicationContext : DbContext
         // Create CommentSchema
         modelBuilder.Entity<Comment>(comment =>
         {
-            comment.ToTable("Comment");
+            comment.ToTable("comment");
             comment.HasKey(p => p.Id);
             comment.HasOne(p => p.Post).WithMany(p => p.Comments).OnDelete(DeleteBehavior.Cascade);
             comment.HasOne(p => p.User).WithMany(p => p.Comments).OnDelete(DeleteBehavior.Cascade);
@@ -68,7 +68,7 @@ public class BlogApplicationContext : DbContext
         
         modelBuilder.Entity<Category>(category =>
         {
-            category.ToTable("Category");
+            category.ToTable("category");
             category.HasKey(p => p.Id);
             category.Property(p => p.Name).HasColumnName("Name");
             category.HasData(InitData.LoadCategories());
@@ -77,7 +77,7 @@ public class BlogApplicationContext : DbContext
         // Create LabelSchema
         modelBuilder.Entity<Label>(label =>
         {
-            label.ToTable("Label");
+            label.ToTable("label");
             label.HasKey(p => p.Id);
             label.Property(p => p.Name).HasColumnName("Name");
 
@@ -87,7 +87,7 @@ public class BlogApplicationContext : DbContext
         //Create Pivot Table Post_Label
         modelBuilder.Entity<PostLabelPivot>(pivot =>
         {
-            pivot.ToTable("Post_label");
+            pivot.ToTable("post_label");
             pivot.HasKey(p => p.Id);
             pivot.HasOne(p => p.Label).WithMany(p => p.LabelPivots);
             pivot.HasOne(p => p.Post).WithMany(p => p.PostPivots);

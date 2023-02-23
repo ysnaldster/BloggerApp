@@ -1,0 +1,15 @@
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\bin\Debug\net6.0\BlogApplication.Application.deps.json
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\bin\Debug\net6.0\BlogApplication.Application.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\bin\Debug\net6.0\BlogApplication.Application.pdb
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\bin\Debug\net6.0\BlogApplication.Domain.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\bin\Debug\net6.0\BlogApplication.Domain.pdb
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\obj\Debug\net6.0\BlogApplication.Application.csproj.AssemblyReference.cache
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\obj\Debug\net6.0\BlogApplication.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\obj\Debug\net6.0\BlogApplication.Application.AssemblyInfoInputs.cache
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\obj\Debug\net6.0\BlogApplication.Application.AssemblyInfo.cs
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\obj\Debug\net6.0\BlogApplication.Application.csproj.CoreCompileInputs.cache
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\obj\Debug\net6.0\BlogApplication.Application.csproj.CopyComplete
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\obj\Debug\net6.0\BlogApplication.Application.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\obj\Debug\net6.0\refint\BlogApplication.Application.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\obj\Debug\net6.0\BlogApplication.Application.pdb
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Application\obj\Debug\net6.0\ref\BlogApplication.Application.dll

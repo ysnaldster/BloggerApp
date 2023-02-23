@@ -5,11 +5,11 @@ using test.Utils;
 
 namespace test.Clients;
 
-public class TestPosgreSqlClient 
+public class TestPosgreSqlClient
 {
-   private readonly string _connectionString;
-   
-   public TestPosgreSqlClient(string connectionString)
+    private readonly string _connectionString;
+
+    public TestPosgreSqlClient(string connectionString)
     {
         _connectionString = connectionString;
     }
@@ -26,25 +26,30 @@ public class TestPosgreSqlClient
         connection.Open();
         return await connection.QueryAsync(query);
     }
-    
+
     public async Task PopulateTables(string schema)
     {
         var count = await ValidateExistDataOnTable(schema);
         if (count == 0)
         {
-            foreach (var post in InitData.LoadPosts())
+            var query = DatabaseManager.GetQueryBySchema();
+            var userData = InitData.LoadUsers();
+            var postData = InitData.LoadPosts();
+            for (var i = 0; i < 3; i++)
             {
-                var query = QueryBase.GetQueryBySchema(schema);
-                //var query = "INSERT INTO post VALUES (@Id, @UserId, @CategoryId, @Title, @PublicationDate, @Content, @Author, @Status)";
-                await ExecuteQueryAsync(query, new DynamicParameters(post));    
+                await ExecuteQueryAsync(query[0], new DynamicParameters(userData[i]));
+                await ExecuteQueryAsync(query[1], new DynamicParameters(postData[i]));
             }
         }
     }
 
-    public async Task DeleteAllItemsFromTableAsync(string schema)
+    public async Task DeleteAllItemsFromTableAsync()
     {
-        var query = $"DELETE FROM {schema};";
-        await ExecuteQueryAsync(query);
+        foreach (var table in DatabaseManager.Tables)
+        {
+            var query = $"DELETE FROM {table};";
+            await ExecuteQueryAsync(query);
+        }
     }
 
     private async Task<int> ValidateExistDataOnTable(string schema)
@@ -53,4 +58,5 @@ public class TestPosgreSqlClient
         var result = await ExecuteQuerySingle(query);
         return result.Count();
     }
+
 }

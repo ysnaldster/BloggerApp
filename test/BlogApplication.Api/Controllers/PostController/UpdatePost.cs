@@ -1,13 +1,11 @@
 ﻿using System.Net;
 using System.Net.Http.Json;
-using BlogApplication.Api;
 using BlogApplication.Domain.Entities;
-using BlogApplication.Infrastructure.Context;
 using FluentAssertions;
 using test.Configuration.Base;
 using test.Configuration.Containers;
-using test.Setup;
 using test.Utils;
+using test.Utils.JSON;
 
 namespace test.BlogApplication.Api.Controllers.PostController;
 
@@ -17,11 +15,11 @@ public class UpdatePost : TestConfigurationBase
     private readonly Post? _post;
     private Post? _postUpdated;
 
-    public UpdatePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, "post")
+    public UpdatePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, DatabaseManager.Tables[0])
     {
-        _post = PostJson.BuildModel( author : PostJson.AuthorToChange, title : PostJson.Title);
+        _post = PostJson.BuildModel(author: PostJson.AuthorToChange, title: PostJson.Title);
     }
-    
+
     /// <summary>
     /// UpdateHttpStatusOkWhenUpdatePost
     /// </summary>
@@ -33,7 +31,7 @@ public class UpdatePost : TestConfigurationBase
         var response = await HttpClient.PutAsync(uri, content);
         response.StatusCode.Should().Be(HttpStatusCode.OK);
     }
-    
+
     /// <summary>
     /// ComparePostUpdatedAndInitPost
     /// </summary>

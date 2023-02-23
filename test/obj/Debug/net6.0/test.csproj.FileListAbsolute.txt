@@ -423,3 +423,5 @@ C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\test\bin\Debug\net6.0\r
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\test\bin\Debug\net6.0\Dapper.dll
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\test\bin\Debug\net6.0\refs\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\test\obj\Debug\net6.0\refint\test.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\test\bin\Debug\net6.0\BlogApplication.Application.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\test\bin\Debug\net6.0\BlogApplication.Application.pdb

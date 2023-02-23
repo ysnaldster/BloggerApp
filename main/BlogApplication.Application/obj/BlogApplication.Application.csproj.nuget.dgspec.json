@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Application\\BlogApplication.Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Application\\BlogApplication.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Application\\BlogApplication.Application.csproj",
+        "projectName": "BlogApplication.Application",
+        "projectPath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Application\\BlogApplication.Application.csproj",
+        "packagesPath": "C:\\Users\\ylopez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ylopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj": {
+                "projectPath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj",
+        "projectName": "BlogApplication.Domain",
+        "projectPath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj",
+        "packagesPath": "C:\\Users\\ylopez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ylopez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

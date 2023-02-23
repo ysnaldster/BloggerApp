@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace test.Setup;
+namespace test.Configuration.Base;
 
 // Config environment app class, this use a Host and server
 public static class ServiceCollectionExtensions

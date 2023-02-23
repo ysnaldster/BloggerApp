@@ -1915,6 +1915,7 @@
       "xunit.runner.visualstudio/2.4.3": {},
       "BlogApplication.Api/1.0.0": {
         "dependencies": {
+          "BlogApplication.Application": "1.0.0",
           "BlogApplication.Domain": "1.0.0",
           "BlogApplication.Infrastructure": "1.0.0",
           "FluentAssertions": "6.0.0",
@@ -1928,6 +1929,19 @@
         },
         "compile": {
           "BlogApplication.Api.dll": {}
+        }
+      },
+      "BlogApplication.Application/1.0.0": {
+        "dependencies": {
+          "BlogApplication.Domain": "1.0.0",
+          "FluentAssertions": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "BlogApplication.Application.dll": {}
+        },
+        "compile": {
+          "BlogApplication.Application.dll": {}
         }
       },
       "BlogApplication.Domain/1.0.0": {
@@ -4730,6 +4744,11 @@
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
     },
     "BlogApplication.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BlogApplication.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

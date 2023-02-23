@@ -498,6 +498,21 @@
           }
         }
       },
+      "BlogApplication.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BlogApplication.Domain": "1.0.0",
+          "FluentAssertions": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BlogApplication.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogApplication.Application.dll": {}
+        }
+      },
       "BlogApplication.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1185,6 +1200,11 @@
         "version.txt"
       ]
     },
+    "BlogApplication.Application/1.0.0": {
+      "type": "project",
+      "path": "../BlogApplication.Application/BlogApplication.Application.csproj",
+      "msbuildProject": "../BlogApplication.Application/BlogApplication.Application.csproj"
+    },
     "BlogApplication.Domain/1.0.0": {
       "type": "project",
       "path": "../BlogApplication.Domain/BlogApplication.Domain.csproj",
@@ -1198,6 +1218,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BlogApplication.Application >= 1.0.0",
       "BlogApplication.Domain >= 1.0.0",
       "BlogApplication.Infrastructure >= 1.0.0",
       "FluentAssertions >= 6.0.0",
@@ -1235,6 +1256,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Application\\BlogApplication.Application.csproj": {
+              "projectPath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Application\\BlogApplication.Application.csproj"
+            },
             "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj": {
               "projectPath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Domain\\BlogApplication.Domain.csproj"
             },

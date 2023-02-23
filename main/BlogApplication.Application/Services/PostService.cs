@@ -1,7 +1,8 @@
 using BlogApplication.Domain.Entities;
-using BlogApplication.Domain.Interfaces;
+using BlogApplication.Domain.Repositories;
+using BlogApplication.Domain.Services;
 
-namespace BlogApplication.Domain.Services;
+namespace BlogApplication.Application.Services;
 
 public class PostService : IPostService
 {

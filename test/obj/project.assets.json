@@ -2757,6 +2757,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "BlogApplication.Application": "1.0.0",
           "BlogApplication.Domain": "1.0.0",
           "BlogApplication.Infrastructure": "1.0.0",
           "FluentAssertions": "6.0.0",
@@ -2774,6 +2775,21 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "BlogApplication.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BlogApplication.Domain": "1.0.0",
+          "FluentAssertions": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BlogApplication.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogApplication.Application.dll": {}
+        }
       },
       "BlogApplication.Domain/1.0.0": {
         "type": "project",
@@ -8235,6 +8251,11 @@
       "type": "project",
       "path": "../main/BlogApplication.Api/BlogApplication.Api.csproj",
       "msbuildProject": "../main/BlogApplication.Api/BlogApplication.Api.csproj"
+    },
+    "BlogApplication.Application/1.0.0": {
+      "type": "project",
+      "path": "../main/BlogApplication.Application/BlogApplication.Application.csproj",
+      "msbuildProject": "../main/BlogApplication.Application/BlogApplication.Application.csproj"
     },
     "BlogApplication.Domain/1.0.0": {
       "type": "project",

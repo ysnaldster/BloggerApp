@@ -125,3 +125,5 @@ C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Ap
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.BlogApplication.Api.props
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Api\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Api\obj\Debug\net6.0\refint\BlogApplication.Api.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Api\bin\Debug\net6.0\BlogApplication.Application.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Api\bin\Debug\net6.0\BlogApplication.Application.pdb

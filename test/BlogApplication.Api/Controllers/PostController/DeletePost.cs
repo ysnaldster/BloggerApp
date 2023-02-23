@@ -1,14 +1,11 @@
 ﻿using System.Net;
 using System.Net.Http.Json;
-using BlogApplication.Api;
 using BlogApplication.Domain.Entities;
-using BlogApplication.Infrastructure.Context;
 using FluentAssertions;
-using test.Clients;
 using test.Configuration.Base;
 using test.Configuration.Containers;
-using test.Setup;
 using test.Utils;
+using test.Utils.JSON;
 
 namespace test.BlogApplication.Api.Controllers.PostController;
 
@@ -16,8 +13,8 @@ namespace test.BlogApplication.Api.Controllers.PostController;
 public class DeletePost :  TestConfigurationBase
 {
     private readonly Post? _post;
-    
-    public DeletePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, "post")
+   
+    public DeletePost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, DatabaseManager.Tables[0])
     {
         _post =  PostJson.BuildModel();
 

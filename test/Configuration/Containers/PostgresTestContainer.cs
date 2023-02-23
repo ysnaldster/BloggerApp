@@ -9,7 +9,8 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using test.Clients;
-using test.Setup;
+using test.Configuration.Base;
+using test.Utils;
 
 namespace test.Configuration.Containers;
 
@@ -22,15 +23,16 @@ public class PostgresTestContainer : WebApplicationFactory<Startup>, IAsyncLifet
 
     public PostgresTestContainer()
     {
+        ConfigureEnvironmentVariablesForTests();
         _postgresqlContainer = new TestcontainersBuilder<PostgreSqlTestcontainer>()
             .WithDatabase(new PostgreSqlTestcontainerConfiguration
             {
-                Database = "test_db",
-                Username = "postgres",
-                Password = "postgres",
+                Database = EnvironmentManager.PostgresDatabaseName,
+                Username = EnvironmentManager.PostgresDatabaseUserName,
+                Password = EnvironmentManager.PostgresDatabasePassword,
             })
-            .WithExposedPort("5432")
-            .WithImage("postgres:latest")
+            .WithExposedPort(EnvironmentManager.PostgresDatabaseExposedPort)
+            .WithImage(EnvironmentManager.PostgresDatabaseImage)
             .WithCleanUp(true)
             .Build();
     }
@@ -69,10 +71,15 @@ public class PostgresTestContainer : WebApplicationFactory<Startup>, IAsyncLifet
         await _clientForTest.PopulateTables(schema);
     }
     
-    public async Task DeleteAllItemsFromTableAsync(string schema)
+    public async Task DeleteAllItemsFromTableAsync()
     {
   
-        await _clientForTest.DeleteAllItemsFromTableAsync(schema);
+        await _clientForTest.DeleteAllItemsFromTableAsync();
+    }
+    
+    private static void ConfigureEnvironmentVariablesForTests()
+    {
+        EnvironmentManager.SetEnvironmentVariables();
     }
     
 }

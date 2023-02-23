@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "go+KcKvaKmSY0/u4ksS4n+OCZTA/dL5k4q/JPMAXvVyOXKWNcruxoP2EDuA97Gll3AL4Kf0JcG2NxtyAYd1JqA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ylopez\\Desktop\\incidentEngineer\\code\\bloggerApp\\main\\BlogApplication.Application\\BlogApplication.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ylopez\\.nuget\\packages\\fluentassertions\\6.0.0\\fluentassertions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylopez\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ylopez\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\ylopez\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

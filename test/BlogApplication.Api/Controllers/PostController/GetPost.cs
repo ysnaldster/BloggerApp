@@ -1,14 +1,11 @@
 ﻿using System.Net;
 using System.Net.Http.Json;
-using BlogApplication.Api;
 using BlogApplication.Domain.Entities;
-using BlogApplication.Infrastructure.Context;
 using FluentAssertions;
-using test.Clients;
 using test.Configuration.Base;
 using test.Configuration.Containers;
-using test.Setup;
 using test.Utils;
+using test.Utils.JSON;
 
 namespace test.BlogApplication.Api.Controllers.PostController;
 
@@ -16,8 +13,8 @@ namespace test.BlogApplication.Api.Controllers.PostController;
 public class GetPost : TestConfigurationBase
 {
     private readonly Post? _post;
-    
-    public GetPost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, "post")
+
+    public GetPost(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, DatabaseManager.Tables[0])
     {
         _post = PostJson.BuildModel();
     }
@@ -31,7 +28,7 @@ public class GetPost : TestConfigurationBase
         var response = await HttpClient.GetAsync($"/Post/api/posts/{_post!.Id}");
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
-    
+
     /// <summary>
     /// GetPostValidateIdAndAuthorValues
     /// </summary>
@@ -39,10 +36,8 @@ public class GetPost : TestConfigurationBase
     public async void GetPostShouldReturnAttributesAreAsserted()
     {
         var response = await HttpClient.GetAsync($"/Post/api/posts/{_post!.Id}");
-        var result =response.Content.ReadFromJsonAsync<Post>().Result;
+        var result = response.Content.ReadFromJsonAsync<Post>().Result;
         _post.Id.Should().Be(result!.Id);
         _post.Author.Should().Be(result!.Author);
     }
-
-
 }

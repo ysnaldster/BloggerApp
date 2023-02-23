@@ -9,7 +9,6 @@ public class Category
         Literature,
         Sports,
         Shows,
-        Movies
     }
 
     public Category(Guid id, CategoryName name)

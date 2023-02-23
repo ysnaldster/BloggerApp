@@ -1,5 +1,5 @@
 using BlogApplication.Domain.Entities;
-using BlogApplication.Domain.Interfaces;
+using BlogApplication.Domain.Repositories;
 using BlogApplication.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 
