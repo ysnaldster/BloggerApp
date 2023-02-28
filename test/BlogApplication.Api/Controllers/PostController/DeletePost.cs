@@ -19,6 +19,10 @@ public class DeletePost :  TestConfigurationBase
         _post =  PostJson.BuildModel();
 
     }
+    
+    /// <summary>
+    /// DeletePostValidateStatusCodeOk
+    /// </summary>
     [Fact]
     public async void DeletePostShouldReturn200StatusCode()
     {

@@ -37,7 +37,7 @@ public class GetPosts : TestConfigurationBase
     }
 
     /// <summary>
-    /// GetPostsForValideNotEmpty
+    /// GetPostsForValidNotEmpty
     /// </summary>
     [Fact]
     public async void GetPostsShouldReturnNotEmpty()

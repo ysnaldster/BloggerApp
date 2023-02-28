@@ -44,71 +44,75 @@ public class PostController : ControllerBase
     /// <summary>
     /// GetAllPostList
     /// </summary>
-    /// <returns></returns>
+    /// <returns>HttpStatusCode by result</returns>
     [HttpGet]
     [Route("posts")]
     public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
     {
         var result = await _postService.GetAllPosts();
-        if (result.Any()) return Ok(result);
-        return NotFound();
+        if (!result.Any()) return NotFound();
+        _logger.LogInformation("Posts obtained");
+        return Ok(result);
     }
     
     /// <summary>
     /// GetAPostById
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
+    /// <param name="id">Post id by to find</param>
+    /// <returns>HttpStatusCode by result</returns>
     [HttpGet]
     [Route("posts/{id}")]
     public async Task<ActionResult<Post>> GetPost(Guid id)
     {
         var result = await _postService.GetPost(id);
-        if (result != null) return Ok(result);
-        return NotFound();
+        if (result == null) return NotFound();
+        _logger.LogInformation($"Post by Id: {id} obtained");
+        return Ok(result);
     }
     
     /// <summary>
     /// CreateNewPostUsingJsonData
     /// </summary>
-    /// <param name="post"></param>
-    /// <returns></returns>
+    /// <param name="post">Post body to create</param>
+    /// <returns>HttpStatusCode by result</returns>
     [HttpPost]
     [Route("posts")]
     public async Task<ActionResult<Post>> CreatePost([FromBody] Post? post)
     {
         if (post == null) return BadRequest();
         var result = await _postService.SavePost(post);
-        _logger.LogInformation("Create post successes");
+        _logger.LogInformation("Post created successful");
         return Ok(result);
     }
     
     /// <summary>
     /// UpdatePostUsingJsonData
     /// </summary>
-    /// <param name="id"></param>
-    /// <param name="post"></param>
-    /// <returns></returns>
+    /// <param name="id">Post id to update</param>
+    /// <param name="post">Post body to update</param>
+    /// <returns>HttpStatusCode by result</returns>
     [HttpPut]
     [Route("posts/{id}")]
     public async Task<ActionResult<Post>> UpdatePost(Guid? id, [FromBody] Post? post)
     {
         if (post == null || id == null) return BadRequest();
         var result = await _postService.UpdatePost(id, post);
+        _logger.LogInformation($"Post by id {id} updated");
         return Ok(result);
     }
     
     /// <summary>
     /// DeletePostById
     /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
+    /// <param name="id">Post id to delete</param>
+    /// <returns>HttpStatusCode by result</returns>
     [HttpDelete]
     [Route("posts/{id}")]
     public async Task<ActionResult<Post>> DeletePost(Guid id)
     {
         var result = await _postService.DeletePost(id);
         if (result == null) return NotFound();
+        _logger.LogInformation($"Post by id {id} deleted");
         return Ok(result);
     }
 }

@@ -1,20 +1,18 @@
 namespace BlogApplication.Api.Middlewares;
 
-//Middleware para saber la hora actual del servidor
 public class TimeMiddleware
 {
-    //Nos indica que vamos a utilizar el middleware que viene de acuerdo al orden que existe.
-    private readonly RequestDelegate next;
+    private readonly RequestDelegate _next;
 
     public TimeMiddleware(RequestDelegate nextRequest)
     {
-        next = nextRequest;
+        _next = nextRequest;
     }
 
-    public async Task Invoke(HttpContext context) //HttpContext representa toda la información del request
+    public async Task Invoke(HttpContext context) 
     {
-        //Esto invoca al ultimo middleware que se ejecuto 
-        await next(context);
+
+        await _next(context);
 
         if (context.Request.Query.Any(p => p.Key == "time"))
             await context.Response.WriteAsync(DateTime.Now.ToShortDateString());

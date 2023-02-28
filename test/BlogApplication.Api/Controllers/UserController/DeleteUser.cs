@@ -19,6 +19,9 @@ public class DeleteUser : TestConfigurationBase
         _user =  UserJson.BuildModel();
     }
     
+    /// <summary>
+    /// DeleteUserValidateStatusCodeOk
+    /// </summary>
     [Fact]
     public async void DeleteUserShouldReturn200StatusCode()
     {

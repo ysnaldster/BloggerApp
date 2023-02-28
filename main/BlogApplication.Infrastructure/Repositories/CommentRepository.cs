@@ -8,7 +8,7 @@ namespace BlogApplication.Infrastructure.Repositories;
 public class CommentRepository : ICommentRepository
 {
     private readonly BlogApplicationContext _context;
-
+    
     public CommentRepository(BlogApplicationContext dbContext)
     {
         _context = dbContext;

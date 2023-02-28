@@ -20,6 +20,9 @@ public class DeleteComment :  TestConfigurationBase
 
     }
     
+    /// <summary>
+    /// DeleteCommentValidateStatusCode
+    /// </summary>
     [Fact]
     public async void DeleteCommentShouldReturn200StatusCode()
     {
