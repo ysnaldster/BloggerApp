@@ -13,7 +13,7 @@ namespace test.BlogApplication.Api.Controllers.UserController;
 public class CreateUser : TestConfigurationBase
 {
     private readonly User _userCreated;
-    public CreateUser(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, DatabaseManager.Tables[1])
+    public CreateUser(PostgresTestContainer postgresTestContainer) : base(postgresTestContainer, DatabaseManager.Tables[0])
     {
         _userCreated = UserJson.UserCreated();
     }

@@ -30,8 +30,5 @@
       <ProjectReference Include="..\main\BlogApplication.Api\BlogApplication.Api.csproj" />
       <ProjectReference Include="..\main\BlogApplication.Infrastructure\BlogApplication.Infrastructure.csproj" />
     </ItemGroup>
-    <ItemGroup>
-      <Folder Include="BlogApplication.Api\Controllers\CommentController" />
-    </ItemGroup>
 
 </Project>

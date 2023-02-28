@@ -35,10 +35,12 @@ public class TestPosgreSqlClient
             var query = DatabaseManager.GetQueryBySchema();
             var userData = InitData.LoadUsers();
             var postData = InitData.LoadPosts();
+            var commentData = InitData.LoadComments();
             for (var i = 0; i < 3; i++)
             {
                 await ExecuteQueryAsync(query[0], new DynamicParameters(userData[i]));
                 await ExecuteQueryAsync(query[1], new DynamicParameters(postData[i]));
+                await ExecuteQueryAsync(query[2], new DynamicParameters(commentData[i]));
             }
         }
     }

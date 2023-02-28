@@ -19,7 +19,7 @@ public class CommentController : ControllerBase
     }
     
     /// <summary>
-    /// GetAllCommentList
+    /// FindAllCommentList
     /// </summary>
     /// <returns></returns>
     [HttpGet]
@@ -31,6 +31,11 @@ public class CommentController : ControllerBase
         return NotFound();
     }
     
+    /// <summary>
+    /// FindCommentById
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpGet]
     [Route("comments/{id}")]
     public async Task<ActionResult<Comment>> GetComment(Guid id)
@@ -40,6 +45,11 @@ public class CommentController : ControllerBase
         return NotFound();
     }
     
+    /// <summary>
+    /// CreateNewCommentUsingJsonBody
+    /// </summary>
+    /// <param name="comment"></param>
+    /// <returns></returns>
     [HttpPost]
     [Route("comments")]
     public async Task<ActionResult<Comment>> CreateComment([FromBody] Comment? comment)
@@ -49,7 +59,13 @@ public class CommentController : ControllerBase
         _logger.LogInformation("Create comment successes");
         return Ok(result);
     }
-
+    
+    /// <summary>
+    /// UpdateCommentDataUsingJsonBody
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="comment"></param>
+    /// <returns></returns>
     [HttpPut]
     [Route("comments/{id}")]
     public async Task<ActionResult<Comment>> UpdateComment(Guid? id, [FromBody] Comment? comment)
@@ -59,6 +75,11 @@ public class CommentController : ControllerBase
         return Ok(result);
     }
     
+    /// <summary>
+    /// DeleteCommentById
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpDelete]
     [Route("comments/{id}")]
     public async Task<ActionResult<Comment>> DeleteComment(Guid id)

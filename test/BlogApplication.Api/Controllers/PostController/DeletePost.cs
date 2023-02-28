@@ -28,6 +28,5 @@ public class DeletePost :  TestConfigurationBase
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         result!.Id.Should().Be(_post.Id.ToString());
     }
-
-
+    
 }

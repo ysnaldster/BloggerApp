@@ -53,7 +53,12 @@ public class PostController : ControllerBase
         if (result.Any()) return Ok(result);
         return NotFound();
     }
-
+    
+    /// <summary>
+    /// GetAPostById
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpGet]
     [Route("posts/{id}")]
     public async Task<ActionResult<Post>> GetPost(Guid id)
@@ -62,7 +67,12 @@ public class PostController : ControllerBase
         if (result != null) return Ok(result);
         return NotFound();
     }
-
+    
+    /// <summary>
+    /// CreateNewPostUsingJsonData
+    /// </summary>
+    /// <param name="post"></param>
+    /// <returns></returns>
     [HttpPost]
     [Route("posts")]
     public async Task<ActionResult<Post>> CreatePost([FromBody] Post? post)
@@ -72,7 +82,13 @@ public class PostController : ControllerBase
         _logger.LogInformation("Create post successes");
         return Ok(result);
     }
-
+    
+    /// <summary>
+    /// UpdatePostUsingJsonData
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="post"></param>
+    /// <returns></returns>
     [HttpPut]
     [Route("posts/{id}")]
     public async Task<ActionResult<Post>> UpdatePost(Guid? id, [FromBody] Post? post)
@@ -81,7 +97,12 @@ public class PostController : ControllerBase
         var result = await _postService.UpdatePost(id, post);
         return Ok(result);
     }
-
+    
+    /// <summary>
+    /// DeletePostById
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpDelete]
     [Route("posts/{id}")]
     public async Task<ActionResult<Post>> DeletePost(Guid id)

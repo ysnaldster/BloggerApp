@@ -8,9 +8,10 @@ public abstract class DatabaseManager
         {
             "INSERT INTO net_user VALUES (@Id, @Name, @Password, @Nickname, @Email, @CreationDate, @UpdateDate)",
             "INSERT INTO post VALUES (@Id, @UserId, @CategoryId, @Title, @PublicationDate, @Content, @Author, @Status)",
+            "INSERT INTO comment VALUES (@Id, @UserId, @PostId, @Content, @PublicationDate)"
         };
         return queries;
     }
 
-    public static readonly string[] Tables = { "post", "net_user" };
+    public static readonly string[] Tables = { "post", "net_user", "comment"};
 }
