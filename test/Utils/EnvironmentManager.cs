@@ -1,4 +1,4 @@
-﻿namespace test.Utils;
+﻿namespace tests.Utils;
 
 public static class EnvironmentManager
 {

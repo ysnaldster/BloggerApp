@@ -15,7 +15,7 @@ public class Startup
    
        public void ConfigureServices(IServiceCollection services)
        {
-           var connectionString = Configuration.GetConnectionString("DefaultConnection");
+           var connectionString = "User ID=postgres;Password=admin;Host=localhost;Port=8082;Database=blog_application_db;";
 
            services.AddNpgsql<BlogApplicationContext>(connectionString);
            services.AddScoped<IPostService, PostService>();

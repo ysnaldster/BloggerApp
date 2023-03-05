@@ -1,6 +1,6 @@
 ﻿using BlogApplication.Domain.Entities;
 
-namespace test.Utils.JSON;
+namespace tests.Utils.JSON;
 
 public abstract class CommentJson
 {

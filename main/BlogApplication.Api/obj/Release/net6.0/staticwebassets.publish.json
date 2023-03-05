@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "JAwLngD25pvAkQE4EJpjFkyEJicA1ngy3tahuNWG7oY=",
+  "Source": "BlogApplication.Api",
+  "BasePath": "_content/BlogApplication.Api",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,6 +1,6 @@
 ﻿using BlogApplication.Domain.Entities;
 
-namespace test.Utils.JSON;
+namespace tests.Utils.JSON;
 
 public abstract class UserJson
 {
@@ -9,7 +9,7 @@ public abstract class UserJson
     public static User BuildModel(
         string id = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7fbb",
         string? name = "John",
-        string? password = "123456",
+        string? password = "p*P3C1RpDL79",
         string? nickname = "John23",
         string? email = "john@mail.com")
     {
@@ -30,6 +30,6 @@ public abstract class UserJson
     public static User UserCreated()
     {
         return BuildModel("8dd1b477-0d2b-42ae-bfd3-0de9d74b7fee", "Mauricio", 
-            "1234567", "mauricio_91", "mauricio@mail.com");
+            "p*P3C1RpDL79", "mauricio_91", "mauricio@mail.com");
     }
 }

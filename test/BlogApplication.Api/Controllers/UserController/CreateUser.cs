@@ -1,15 +1,14 @@
 ﻿using System.Net.Http.Json;
 using BlogApplication.Domain.Entities;
 using FluentAssertions;
-using test.Configuration.Base;
-using test.Configuration.Containers;
-using test.Utils;
-using test.Utils.JSON;
+using tests.Configuration.Base;
+using tests.Configuration.Containers;
+using tests.Utils;
+using tests.Utils.JSON;
 
-namespace test.BlogApplication.Api.Controllers.UserController;
+namespace tests.BlogApplication.Api.Controllers.UserController;
 
 [Collection(nameof(IntegrationContainerCollection))]
-
 public class CreateUser : TestConfigurationBase
 {
     private readonly User _userCreated;

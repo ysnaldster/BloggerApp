@@ -12,11 +12,12 @@ The educational points evidenced are the following.
 
 * Creation of API structures.
 * Use of .Net Core.
-* Management of Entity Framework (Fluent API).
+* Use of Entity Framework (Fluent API).
 * Creation of Docker containers for database administration and application encapsulation.
 * PostgresSQL as main database engine.
 * Manage of DDD (Drive Domain Design) architecture
-* Testing with Xunit.
+* Setting up an optimized test environment with Xunit
+* Integration and unit testing with Xunit.
 
 ## Table of Contents
 
@@ -52,10 +53,35 @@ You will see the next logs.
 
 ## Testing
 
-Blog Application has a testing section composed of unit and integration tests 
+Blog Application has a testing section composed of unit tests 
 that allow evaluating the behavior of the application prior to its main execution. 
+***It is important to have docker running beforehand***.
 
-    Code Core....
+    dotnet test
+
+You will see the next logs.
+
+    Determinando los proyectos que se van a restaurar...
+    Todos los proyectos estan actualizados para la restauracion.
+    BlogApplication.Domain -> C:\yourDirectory\bloggerApp\main\
+    BlogApplication.Domain\bin\Debug\net6.0\BlogApplication.Domain.dll
+    BlogApplication.Application -> C:\yourDirectory\bloggerApp\main\
+    BlogApplication.Application\bin\Debug\net6.0\BlogApplication.Application.dll
+    BlogApplication.Infrastructure -> C:\yourDirectory\bloggerApp\main\
+    BlogApplication.Infrastructure\bin\Debug\net6.0\
+    BlogApplication.Infrastructure.dll
+    BlogApplication.Api -> C:\yourDirectory\main\
+    BlogApplication.Api\bin\Debug\net6.0\BlogApplication.Api.dll
+    test -> C:\yourDirectory\bloggerApp\test\bin\Debug\net6.0\test.dll
+    Serie de pruebas para C:\yourDirectory\bloggerApp\test\bin\Debug\net6.0
+    \test.dll (.NETCoreApp,Version=v6.0)
+    Herramienta de línea de comandos de ejecución de pruebas de Microsoft(R)
+    , versión 17.4.0 (x64)
+    Copyright (c) Microsoft Corporation. Todos los derechos reservados.
+    Iniciando la ejecución de pruebas, espere...
+    1 archivos de prueba en total coincidieron con el patrón especificado.
+    Correctas! - Con error:     0, Superado:    26, Omitido:     0, 
+    Total:    26, Duración: 2 s - test.dll (net6.0)
 
 ## Endpoints 
 
@@ -312,6 +338,7 @@ To consume the main Posts BlogApplication creation service use the following end
     }
 }
 ```
+The structures of the ***comment*** and ***user*** entities are similar to those described above.
 
 ## Technologies used
 

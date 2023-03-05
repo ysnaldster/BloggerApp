@@ -25,4 +25,12 @@
 
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="out\web.config" />
+      <_ContentIncludedByDefault Remove="out\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="out\appsettings.json" />
+      <_ContentIncludedByDefault Remove="out\BlogApplication.Api.deps.json" />
+      <_ContentIncludedByDefault Remove="out\BlogApplication.Api.runtimeconfig.json" />
+    </ItemGroup>
+
 </Project>

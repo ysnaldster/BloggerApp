@@ -2,11 +2,11 @@
 using BlogApplication.Domain.Entities;
 using FluentAssertions;
 using Newtonsoft.Json;
-using test.Configuration.Base;
-using test.Configuration.Containers;
-using test.Utils;
+using tests.Configuration.Base;
+using tests.Configuration.Containers;
+using tests.Utils;
 
-namespace test.BlogApplication.Api.Controllers.PostController;
+namespace tests.BlogApplication.Api.Controllers.PostController;
 
 [Collection(nameof(IntegrationContainerCollection))]
 public class GetPosts : TestConfigurationBase

@@ -13,4 +13,5 @@ public interface IUserService
     public Task<User> UpdateUser(Guid? id, User? user);
 
     public Task<User?> DeleteUser(Guid id);
+
 }

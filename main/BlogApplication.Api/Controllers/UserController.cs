@@ -1,4 +1,5 @@
-﻿using BlogApplication.Domain.Entities;
+﻿using BlogApplication.Application.Services;
+using BlogApplication.Domain.Entities;
 using BlogApplication.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -57,6 +58,9 @@ public class UserController : ControllerBase
     public async Task<ActionResult<Post>> CreateUser([FromBody] User? user)
     {
         if (user == null) return BadRequest();
+        var passwordValidate = ValidateDataService.PasswordValidate(user.Password);
+        if (passwordValidate != ValidateDataService.SecurityLevel.Strong)
+            return BadRequest("The user entered a password that is not secure.");
         var result = await _userService.SaveUser(user);
         _logger.LogInformation("Create user successes");
         return Ok(result);

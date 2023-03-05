@@ -8,11 +8,11 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using test.Clients;
-using test.Configuration.Base;
-using test.Utils;
+using tests.Clients;
+using tests.Configuration.Base;
+using tests.Utils;
 
-namespace test.Configuration.Containers;
+namespace tests.Configuration.Containers;
 
 public class PostgresTestContainer : WebApplicationFactory<Startup>, IAsyncLifetime
 {

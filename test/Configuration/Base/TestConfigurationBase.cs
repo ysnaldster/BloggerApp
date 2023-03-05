@@ -1,7 +1,7 @@
-﻿using test.Configuration.Containers;
-using test.Utils;
+﻿using tests.Configuration.Containers;
+using tests.Utils;
 
-namespace test.Configuration.Base;
+namespace tests.Configuration.Base;
 
 public class TestConfigurationBase : IAsyncLifetime
 {

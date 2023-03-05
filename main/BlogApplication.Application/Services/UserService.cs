@@ -1,4 +1,5 @@
-﻿using BlogApplication.Domain.Entities;
+﻿using System.Text.RegularExpressions;
+using BlogApplication.Domain.Entities;
 using BlogApplication.Domain.Repositories;
 using BlogApplication.Domain.Services;
 
@@ -6,14 +7,13 @@ namespace BlogApplication.Application.Services;
 
 public class UserService : IUserService
 {
-    
     private readonly IUserRepository _userRepository;
-
+    
     public UserService(IUserRepository userRepository)
     {
         _userRepository = userRepository;
     }
-    
+
     public Task<IEnumerable<User>> GetAllUsers()
     {
         return _userRepository.GetAllUsers();
@@ -38,4 +38,5 @@ public class UserService : IUserService
     {
         return _userRepository.DeleteUser(id);
     }
+
 }

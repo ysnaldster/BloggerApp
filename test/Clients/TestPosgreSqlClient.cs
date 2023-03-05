@@ -1,9 +1,9 @@
 ﻿using BlogApplication.Domain.Entities;
 using Dapper;
 using Npgsql;
-using test.Utils;
+using tests.Utils;
 
-namespace test.Clients;
+namespace tests.Clients;
 
 public class TestPosgreSqlClient
 {

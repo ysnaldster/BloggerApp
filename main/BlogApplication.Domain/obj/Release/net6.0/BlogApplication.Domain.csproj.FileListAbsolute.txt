@@ -1,0 +1,15 @@
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\bin\Release\net6.0\BlogApplication.Domain.deps.json
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\bin\Release\net6.0\BlogApplication.Domain.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\bin\Release\net6.0\BlogApplication.Domain.pdb
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Release\net6.0\BlogApplication.Domain.csproj.AssemblyReference.cache
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Release\net6.0\BlogApplication.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Release\net6.0\BlogApplication.Domain.AssemblyInfoInputs.cache
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Release\net6.0\BlogApplication.Domain.AssemblyInfo.cs
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Release\net6.0\BlogApplication.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Release\net6.0\BlogApplication.Domain.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Release\net6.0\refint\BlogApplication.Domain.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Release\net6.0\BlogApplication.Domain.pdb
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Domain\obj\Release\net6.0\ref\BlogApplication.Domain.dll
+C:\webapp\build\BlogApplication.Domain.deps.json
+C:\webapp\build\BlogApplication.Domain.dll
+C:\webapp\build\BlogApplication.Domain.pdb

@@ -17,7 +17,7 @@ public class BlogApplicationContext : DbContext
     public DbSet<Label> Labels { get; set; }
     public DbSet<PostLabelPivot> PostLabelPivots { get; set; }
 
-    // Create Schemas with Fluent API
+    /// Create Schemas with Fluent API
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Create UserSchema

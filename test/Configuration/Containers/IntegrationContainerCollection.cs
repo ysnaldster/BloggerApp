@@ -1,4 +1,4 @@
-﻿namespace test.Configuration.Containers;
+﻿namespace tests.Configuration.Containers;
 
 [CollectionDefinition(nameof(IntegrationContainerCollection))]
 public class IntegrationContainerCollection :
