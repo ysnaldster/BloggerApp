@@ -11,7 +11,7 @@ public abstract class PostJson
         string? author = "Camila",
         string categoryId = "b7d0bbf0-a1e9-4dbd-845b-f8e751160000",
         string userId = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7fbb",
-        string title = "The new things of technology")
+        string title = "The new    things of   technology")
     {
         var time = new DateTime(2008, 6, 25, 11, 18, 35, 100);
         var post = new Post()
@@ -21,7 +21,7 @@ public abstract class PostJson
             CategoryId = Guid.Parse(categoryId),
             Title = title,
             PublicationDate = time,
-            Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            Content = "Lorem ipsum dolor sit  amet, consectetur    adipiscing elit ",
             Author = author,
             Status = true,
             User = new User(

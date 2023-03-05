@@ -1,4 +1,5 @@
-﻿using BlogApplication.Domain.Entities;
+﻿using System.Text.RegularExpressions;
+using BlogApplication.Domain.Entities;
 using BlogApplication.Domain.Repositories;
 using BlogApplication.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,10 @@ public class UserRepository : IUserRepository
     public async Task<User> SaveUser(User? user)
     {
         if (user == null) throw new ArgumentNullException(nameof(user));
+        user.Name = Regex.Replace(user.Name, @"\s+", " ").Trim();
+        user.Password = Regex.Replace(user.Password, @"\s+", " ").Trim();
+        user.Nickname = Regex.Replace(user.Nickname, @"\s+", " ").Trim();
+        user.Email = Regex.Replace(user.Email, @"\s+", " ").Trim();
         await _context.AddAsync(user);
         await _context.SaveChangesAsync();
         return user;
@@ -37,6 +42,10 @@ public class UserRepository : IUserRepository
     public async Task<User> UpdateUser(Guid? id, User? user)
     {
         if (user == null || id == null) throw new ArgumentNullException(nameof(user));
+        user.Name = Regex.Replace(user.Name, @"\s+", " ").Trim();
+        user.Password = Regex.Replace(user.Password, @"\s+", " ").Trim();
+        user.Nickname = Regex.Replace(user.Nickname, @"\s+", " ").Trim();
+        user.Email = Regex.Replace(user.Email, @"\s+", " ").Trim();
         var actualUser = await _context.Users.SingleOrDefaultAsync(p => p.Id == id);
         if (actualUser == null) return user;
         actualUser.Name = user.Name;

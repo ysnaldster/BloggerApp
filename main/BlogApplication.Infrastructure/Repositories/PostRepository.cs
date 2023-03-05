@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using BlogApplication.Domain.Entities;
 using BlogApplication.Domain.Repositories;
 using BlogApplication.Infrastructure.Context;
@@ -39,6 +40,9 @@ public class PostRepository : IPostRepository
     public async Task<Post> SavePost(Post? post)
     {
         if (post == null) throw new ArgumentNullException(nameof(post));
+        post.Title = Regex.Replace(post.Title!, @"\s+", " ").Trim();
+        post.Content = Regex.Replace(post.Content!, @"\s+", " ").Trim();
+        post.Author = Regex.Replace(post.Author!, @"\s+", " ").Trim();
         await _context.AddAsync(post);
         await _context.SaveChangesAsync();
         return post;
@@ -47,6 +51,9 @@ public class PostRepository : IPostRepository
     public async Task<Post> UpdatePost(Guid? id, Post? post)
     {
         if (post == null || id == null) throw new ArgumentNullException(nameof(post));
+        post.Title = Regex.Replace(post.Title!, @"\s+", " ").Trim();
+        post.Content = Regex.Replace(post.Content!, @"\s+", " ").Trim();
+        post.Author = Regex.Replace(post.Author!, @"\s+", " ").Trim();
         var actualPost = await _context.Posts.SingleOrDefaultAsync(p => p.Id == id);
         if (actualPost == null) return post;
         actualPost.Author = post.Author;

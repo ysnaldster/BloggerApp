@@ -531,6 +531,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "BlogApplication.Application": "1.0.0",
           "BlogApplication.Domain": "1.0.0",
           "FluentAssertions": "6.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.9",

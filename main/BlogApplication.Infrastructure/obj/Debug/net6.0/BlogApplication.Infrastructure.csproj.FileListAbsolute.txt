@@ -32,3 +32,5 @@ C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.In
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\BlogApplication.Infrastructure.genruntimeconfig.cache
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\ref\BlogApplication.Infrastructure.dll
 C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Infrastructure\obj\Debug\net6.0\refint\BlogApplication.Infrastructure.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Infrastructure\bin\Debug\net6.0\BlogApplication.Application.dll
+C:\Users\ylopez\Desktop\incidentEngineer\code\bloggerApp\main\BlogApplication.Infrastructure\bin\Debug\net6.0\BlogApplication.Application.pdb

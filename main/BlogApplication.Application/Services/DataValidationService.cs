@@ -35,4 +35,9 @@ public abstract class DataValidationService
 
         return SecurityLevel.Weak;
     }
+
+    public static string RemoveBlanks(string value)
+    {
+        return Regex.Replace(value, @"\s+", " ").Trim();
+    }
 }

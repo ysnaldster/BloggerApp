@@ -58,8 +58,9 @@ public class UserController : ControllerBase
     public async Task<ActionResult<Post>> CreateUser([FromBody] User? user)
     {
         if (user == null) return BadRequest();
-        var passwordValidate = ValidateDataService.PasswordValidate(user.Password);
-        if (passwordValidate != ValidateDataService.SecurityLevel.Strong)
+        
+        var passwordValidate = DataValidationService.PasswordValidate(user.Password);
+        if (passwordValidate != DataValidationService.SecurityLevel.Strong)
             return BadRequest("The user entered a password that is not secure.");
         var result = await _userService.SaveUser(user);
         _logger.LogInformation("Create user successes");

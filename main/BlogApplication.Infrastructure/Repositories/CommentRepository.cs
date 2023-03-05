@@ -1,4 +1,5 @@
-﻿using BlogApplication.Domain.Entities;
+﻿using System.Text.RegularExpressions;
+using BlogApplication.Domain.Entities;
 using BlogApplication.Domain.Repositories;
 using BlogApplication.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
@@ -30,6 +31,7 @@ public class CommentRepository : ICommentRepository
     public async Task<Comment> SaveComment(Comment? comment)
     {
         if (comment == null) throw new ArgumentNullException(nameof(comment));
+        comment.Content = Regex.Replace(comment.Content!, @"\s+", " ").Trim();
         await _context.AddAsync(comment);
         await _context.SaveChangesAsync();
         return comment;
@@ -38,6 +40,7 @@ public class CommentRepository : ICommentRepository
     public async Task<Comment> UpdateComment(Guid? id, Comment? comment)
     {
         if (comment == null || id == null) throw new ArgumentNullException(nameof(comment));
+        comment.Content = Regex.Replace(comment.Content!, @"\s+", " ").Trim();
         var actualComment = await _context.Comments.SingleOrDefaultAsync(p => p.Id == id);
         if (actualComment == null) return comment;
         actualComment.Content = comment.Content;

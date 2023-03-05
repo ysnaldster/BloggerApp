@@ -8,9 +8,9 @@ public abstract class UserJson
     public const string NameToChange = "Adelaida", Nickname = "adelaida_95";
     public static User BuildModel(
         string id = "8dd1b477-0d2b-42ae-bfd3-0de9d74b7fbb",
-        string? name = "John",
+        string? name = " John ",
         string? password = "p*P3C1RpDL79",
-        string? nickname = "John23",
+        string? nickname = " John23 ",
         string? email = "john@mail.com")
     {
         var time = new DateTime(2008, 6, 25, 11, 18, 35, 100);

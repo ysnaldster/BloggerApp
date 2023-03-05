@@ -12,8 +12,8 @@ public class Startup
         {
             Configuration = configuration;
         }
-   
-       public void ConfigureServices(IServiceCollection services)
+
+   public void ConfigureServices(IServiceCollection services)
        {
            var connectionString = "User ID=postgres;Password=admin;Host=localhost;Port=8082;Database=blog_application_db;";
 
@@ -46,5 +46,9 @@ public class Startup
             {
                 endpoints.MapControllers();
             });
+
+            using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>()!.CreateScope();
+            var context = serviceScope.ServiceProvider.GetRequiredService<BlogApplicationContext>();
+            context.Database.EnsureCreated();
         }
 }
