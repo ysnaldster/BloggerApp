@@ -4,7 +4,6 @@ namespace BlogApplication.Domain.Services;
 
 public interface IPostService
 {
-    public bool GetDatabaseConnection();
     public Task<IEnumerable<Post>> GetAllPosts();
 
     public Task<Post?> GetPost(Guid id);

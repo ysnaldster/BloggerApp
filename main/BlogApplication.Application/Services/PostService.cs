@@ -13,11 +13,6 @@ public class PostService : IPostService
         _postRepository = postRepository;
     }
 
-    public bool GetDatabaseConnection()
-    {
-        return _postRepository.GetDatabaseConnection();
-    }
-
     public Task<IEnumerable<Post>> GetAllPosts()
     {
         return _postRepository.GetAllPosts();
