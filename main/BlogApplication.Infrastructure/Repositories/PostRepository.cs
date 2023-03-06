@@ -15,11 +15,6 @@ public class PostRepository : IPostRepository
         _context = dbContext;
     }
 
-    public bool GetDatabaseConnection()
-    {
-        return _context.Database.EnsureCreated();
-    }
-
     public async Task<IEnumerable<Post>> GetAllPosts()
     {
         return await _context.Posts

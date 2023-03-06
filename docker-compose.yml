@@ -1,10 +1,9 @@
 ﻿services:
-  app: 
+  app:
     image: 'bloggerapp'
     ports:
       - 5123:5123
-    build: ./
-    container_name: bloggerapp
+    container_name: blogger_app
     depends_on:
       - postgres
   postgres:
@@ -15,4 +14,4 @@
       - POSTGRES_PASSWORD=admin
       - POSTGRES_HOST=localhost
     ports:
-      - "8082:5432"
+      - 5432:5432

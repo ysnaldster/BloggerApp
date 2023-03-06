@@ -23,6 +23,7 @@ The educational points evidenced are the following.
 
 1. How to run. 
 2. Testing.
+3. Entity-relationship diagram
 3. Endpoints.
 4. Technologies used.
 5. Resources.
@@ -59,7 +60,7 @@ that allow evaluating the behavior of the application prior to its main executio
 
     dotnet test
 
-You will see the next logs.
+You will see the next logs (Example).
 
     Determinando los proyectos que se van a restaurar...
     Todos los proyectos estan actualizados para la restauracion.
@@ -82,6 +83,12 @@ You will see the next logs.
     1 archivos de prueba en total coincidieron con el patrón especificado.
     Correctas! - Con error:     0, Superado:    26, Omitido:     0, 
     Total:    26, Duración: 2 s - test.dll (net6.0)
+
+## Entity-relationship diagram
+
+The following is a list of all project entities.
+
+![entityRelation](./resources/blogApplicationRelationsDiagram.drawio.png)
 
 ## Endpoints 
 

@@ -30,18 +30,6 @@ public class PostController : ControllerBase
     }
     
     /// <summary>
-    /// CheckCreatedDatabaseConnection
-    /// </summary>
-    /// <returns>StatusCode</returns>
-    [HttpGet]
-    [Route("connection")]
-    public IActionResult GetConnection()
-    {
-        if (_postService.GetDatabaseConnection()) return Ok();
-        return NotFound();
-    }
-    
-    /// <summary>
     /// GetAllPostList
     /// </summary>
     /// <returns>HttpStatusCode by result</returns>
