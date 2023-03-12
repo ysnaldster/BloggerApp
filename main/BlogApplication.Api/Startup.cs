@@ -19,10 +19,10 @@ public class Startup
 
            services.AddNpgsql<BlogApplicationContext>(connectionString);
            services.AddScoped<IPostService, PostService>();
+           services.AddScoped<ICommentService, CommentService>();
+           services.AddScoped<IUserService, UserService>();
            services.AddScoped<IPostRepository, PostRepository>();
            services.AddScoped<IUserRepository, UserRepository>();
-           services.AddScoped<IUserService, UserService>();
-           services.AddScoped<ICommentService, CommentService>();
            services.AddScoped<ICommentRepository, CommentRepository>();
            services.AddSwaggerGen();
            services.AddAuthorization();
