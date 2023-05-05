@@ -62,25 +62,25 @@ that allow evaluating the behavior of the application prior to its main executio
 
 You will see the next logs (Example).
 
-   Determining projects to restore...
-   All projects are up-to-date for restore.
-   BlogApplication.Domain -> C:\yourDirectory\BloggerApp\main\BlogApplication.Domain\bin\Debug\net6.0\
-   BlogApplication.Domain.dll
-   BlogApplication.Application -> C:\yourDirectory\BloggerApp\main\BlogApplication.Application\bin\Deb
-   ug\net6.0\BlogApplication.Application.dll
-   BlogApplication.Infrastructure -> C:\yourDirectory\BloggerApp\main\BlogApplication.Infrastructure\b
-   in\Debug\net6.0\BlogApplication.Infrastructure.dll
-   BlogApplication.Api -> C:\yourDirectory\BloggerApp\main\BlogApplication.Api\bin\Debug\net6.0\BlogAp
-   plication.Api.dll
-   test -> C:\yourDirectory\BloggerApp\test\bin\Debug\net6.0\test.dll
-   Test run for C:\yourDirectory\BloggerApp\test\bin\Debug\net6.0\test.dll (.NETCoreApp,Version=v6.0)
-   Microsoft (R) Test Execution Command Line Tool Version 17.5.0 (x64)
-   Copyright (c) Microsoft Corporation.  All rights reserved.
+           Determining projects to restore...
+           All projects are up-to-date for restore.
+           BlogApplication.Domain -> C:\yourDirectory\BloggerApp\main\BlogApplication.Domain\bin\Debug\net6.0\
+           BlogApplication.Domain.dll
+           BlogApplication.Application -> C:\yourDirectory\BloggerApp\main\BlogApplication.Application\bin\Deb
+           ug\net6.0\BlogApplication.Application.dll
+           BlogApplication.Infrastructure -> C:\yourDirectory\BloggerApp\main\BlogApplication.Infrastructure\b
+           in\Debug\net6.0\BlogApplication.Infrastructure.dll
+           BlogApplication.Api -> C:\yourDirectory\BloggerApp\main\BlogApplication.Api\bin\Debug\net6.0\BlogAp
+           plication.Api.dll
+           test -> C:\yourDirectory\BloggerApp\test\bin\Debug\net6.0\test.dll
+           Test run for C:\yourDirectory\BloggerApp\test\bin\Debug\net6.0\test.dll (.NETCoreApp,Version=v6.0)
+           Microsoft (R) Test Execution Command Line Tool Version 17.5.0 (x64)
+           Copyright (c) Microsoft Corporation.  All rights reserved.
 
-   Starting test execution, please wait...
-   A total of 1 test files matched the specified pattern.
+           Starting test execution, please wait...
+           A total of 1 test files matched the specified pattern.
 
-   Passed!  - Failed:     0, Passed:    30, Skipped:     0, Total:    30, Duration: 6 s - test.dll (net6.0)
+           Passed!  - Failed:     0, Passed:    30, Skipped:     0, Total:    30, Duration: 6 s - test.dll (net6.0)
 
 ## Entity-relationship diagram
 
