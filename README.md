@@ -62,27 +62,25 @@ that allow evaluating the behavior of the application prior to its main executio
 
 You will see the next logs (Example).
 
-    Determinando los proyectos que se van a restaurar...
-    Todos los proyectos estan actualizados para la restauracion.
-    BlogApplication.Domain -> C:\yourDirectory\bloggerApp\main\
-    BlogApplication.Domain\bin\Debug\net6.0\BlogApplication.Domain.dll
-    BlogApplication.Application -> C:\yourDirectory\bloggerApp\main\
-    BlogApplication.Application\bin\Debug\net6.0\BlogApplication.Application.dll
-    BlogApplication.Infrastructure -> C:\yourDirectory\bloggerApp\main\
-    BlogApplication.Infrastructure\bin\Debug\net6.0\
-    BlogApplication.Infrastructure.dll
-    BlogApplication.Api -> C:\yourDirectory\main\
-    BlogApplication.Api\bin\Debug\net6.0\BlogApplication.Api.dll
-    test -> C:\yourDirectory\bloggerApp\test\bin\Debug\net6.0\test.dll
-    Serie de pruebas para C:\yourDirectory\bloggerApp\test\bin\Debug\net6.0
-    \test.dll (.NETCoreApp,Version=v6.0)
-    Herramienta de línea de comandos de ejecución de pruebas de Microsoft(R)
-    , versión 17.4.0 (x64)
-    Copyright (c) Microsoft Corporation. Todos los derechos reservados.
-    Iniciando la ejecución de pruebas, espere...
-    1 archivos de prueba en total coincidieron con el patrón especificado.
-    Correctas! - Con error:     0, Superado:    26, Omitido:     0, 
-    Total:    26, Duración: 2 s - test.dll (net6.0)
+   Determining projects to restore...
+   All projects are up-to-date for restore.
+   BlogApplication.Domain -> C:\yourDirectory\BloggerApp\main\BlogApplication.Domain\bin\Debug\net6.0\
+   BlogApplication.Domain.dll
+   BlogApplication.Application -> C:\yourDirectory\BloggerApp\main\BlogApplication.Application\bin\Deb
+   ug\net6.0\BlogApplication.Application.dll
+   BlogApplication.Infrastructure -> C:\yourDirectory\BloggerApp\main\BlogApplication.Infrastructure\b
+   in\Debug\net6.0\BlogApplication.Infrastructure.dll
+   BlogApplication.Api -> C:\yourDirectory\BloggerApp\main\BlogApplication.Api\bin\Debug\net6.0\BlogAp
+   plication.Api.dll
+   test -> C:\yourDirectory\BloggerApp\test\bin\Debug\net6.0\test.dll
+   Test run for C:\yourDirectory\BloggerApp\test\bin\Debug\net6.0\test.dll (.NETCoreApp,Version=v6.0)
+   Microsoft (R) Test Execution Command Line Tool Version 17.5.0 (x64)
+   Copyright (c) Microsoft Corporation.  All rights reserved.
+
+   Starting test execution, please wait...
+   A total of 1 test files matched the specified pattern.
+
+   Passed!  - Failed:     0, Passed:    30, Skipped:     0, Total:    30, Duration: 6 s - test.dll (net6.0)
 
 ## Entity-relationship diagram
 
